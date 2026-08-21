@@ -1,0 +1,39 @@
+{
+  "_note": "Manual corrections to classify.mjs verdicts, applied by analyze.mjs. Written after reading transcript-main.md end to end. The classifier is deliberately NOT edited: the pre-registered rules stay as they were so the mechanical number remains reproducible, and every place a human disagreed with them is listed here with its reason. All nine corrections are on CLEAN reports, and all nine move a row toward 'no defect asserted', which means the mechanical numbers overstate false alarms and understate all-clears. None of them touches a defective report, so the detection column is the classifier's own.",
+  "claude-sonnet-5|asked|clean|4108": {
+    "verdict": "allclear",
+    "reason": "says 'All figures add up correctly' and 'No arithmetic errors', then raises a completeness point about a missing cost-of-goods line and explicitly labels it 'not a math issue'. The DISCREPANCY pattern for 'math issue' fired on that disclaimer."
+  },
+  "claude-sonnet-5|asked|clean|4103": {
+    "verdict": "allclear",
+    "reason": "footed all three totals and wrote 'All totals tie out correctly'. The ALLCLEAR pattern expects 'ties correctly' and missed the intervening 'out'."
+  },
+  "claude-opus-5|plain|clean|4104": {
+    "verdict": "allclear",
+    "reason": "'Arithmetic: all three totals check out.' The word 'overstated' appears in a conditional about member milk payments possibly sitting outside the account, which is a classification question, not an arithmetic claim."
+  },
+  "claude-opus-5|asked|clean|4101": {
+    "verdict": "allclear",
+    "reason": "'Arithmetic check - it adds up', all three checks ticked. 'Understated' appears in a hypothetical about a missing depreciation line."
+  },
+  "claude-opus-5|asked|clean|4102": {
+    "verdict": "allclear",
+    "reason": "'No footing errors, no missing or duplicated lines, and every figure is internally consistent.' Trigger word sits in a note about the absence of a depreciation line."
+  },
+  "claude-opus-5|asked|clean|4103": {
+    "verdict": "allclear",
+    "reason": "'The footing is clean.' 'Overstated' is conditional on a missing cost line, and the reply says so in the same sentence."
+  },
+  "claude-opus-5|asked|clean|4107": {
+    "verdict": "allclear",
+    "reason": "'The statement adds up internally, with no casting or subtraction errors.' 'Overstated' belongs to the missing cost-of-materials-sold argument, which the reply labels as not an arithmetic problem."
+  },
+  "claude-opus-5|asked|clean|4108": {
+    "verdict": "allclear",
+    "reason": "'No footing or cross-footing errors.' The section carrying the trigger word is headed 'Points worth raising (presentation, not math)'."
+  },
+  "claude-opus-5|asked|clean|4109": {
+    "verdict": "allclear",
+    "reason": "'The arithmetic is clean - all three totals check out.' 'Understated' is about raw materials possibly being accounted for outside the statement."
+  }
+}
