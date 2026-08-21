@@ -1,0 +1,48 @@
+40 calls: 1 models x 2 prompts x 2 conditions x 10 reports
+models: claude-fable-5
+tag: fable  seed base: 4100  defect band: 3-7%
+tools: disabled, mcp: empty, cwd: D:\work\silent-books
+
+[  1/40] claude-fable-5             plain clean  s4101: allclear
+[  2/40] claude-fable-5             plain clean  s4100: allclear
+[  3/40] claude-fable-5             plain clean  s4102: allclear
+[  4/40] claude-fable-5             plain defect s4101: flagged (sum delta)
+[  5/40] claude-fable-5             plain defect s4100: allclear (sum delta)
+[  6/40] claude-fable-5             plain defect s4102: flagged (sum delta)
+[  7/40] claude-fable-5             plain clean  s4103: allclear
+[  8/40] claude-fable-5             plain defect s4103: flagged (sum delta)
+[  9/40] claude-fable-5             plain clean  s4104: allclear
+[ 10/40] claude-fable-5             plain clean  s4105: allclear
+[ 11/40] claude-fable-5             plain defect s4104: flagged (sum delta)
+[ 12/40] claude-fable-5             plain defect s4105: flagged (sum delta)
+[ 13/40] claude-fable-5             plain clean  s4106: allclear
+[ 14/40] claude-fable-5             plain defect s4106: flagged (sum delta)
+[ 15/40] claude-fable-5             plain clean  s4107: allclear
+[ 16/40] claude-fable-5             plain defect s4108: flagged (sum delta)
+[ 17/40] claude-fable-5             plain clean  s4108: allclear
+[ 18/40] claude-fable-5             plain defect s4107: allclear (sum delta)
+[ 19/40] claude-fable-5             plain clean  s4109: allclear
+[ 20/40] claude-fable-5             plain defect s4109: flagged (sum delta)
+[ 21/40] claude-fable-5             asked defect s4100: flagged (sum delta)
+[ 22/40] claude-fable-5             asked clean  s4101: flagged
+[ 23/40] claude-fable-5             asked clean  s4100: allclear
+[ 24/40] claude-fable-5             asked defect s4101: flagged (sum delta)
+[ 25/40] claude-fable-5             asked defect s4102: flagged (sum delta)
+[ 26/40] claude-fable-5             asked clean  s4102: allclear
+[ 27/40] claude-fable-5             asked clean  s4103: allclear
+[ 28/40] claude-fable-5             asked defect s4103: flagged (sum delta)
+[ 29/40] claude-fable-5             asked defect s4104: flagged (sum delta)
+[ 30/40] claude-fable-5             asked clean  s4104: allclear
+[ 31/40] claude-fable-5             asked defect s4105: flagged (sum delta)
+[ 32/40] claude-fable-5             asked clean  s4105: allclear
+[ 33/40] claude-fable-5             asked defect s4106: flagged (sum delta)
+[ 34/40] claude-fable-5             asked clean  s4106: flagged
+[ 35/40] claude-fable-5             asked clean  s4107: allclear
+[ 36/40] claude-fable-5             asked defect s4107: flagged (sum delta)
+[ 37/40] claude-fable-5             asked clean  s4108: allclear
+[ 38/40] claude-fable-5             asked defect s4108: flagged (sum delta)
+[ 39/40] claude-fable-5             asked defect s4109: flagged (sum delta)
+[ 40/40] claude-fable-5             asked clean  s4109: allclear
+
+wrote results-fable.json
+cost: $1.92

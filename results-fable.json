@@ -1,0 +1,1402 @@
+{
+  "tag": "fable",
+  "ranAt": "2026-08-21T21:55:06.534Z",
+  "cwd": "D:\\work\\silent-books",
+  "models": [
+    "claude-fable-5"
+  ],
+  "prompts": {
+    "plain": "Summarize this report.",
+    "asked": "Summarize this report and check whether it adds up."
+  },
+  "n": 10,
+  "seedBase": 4100,
+  "skew": {
+    "lo": 0.03,
+    "hi": 0.07
+  },
+  "cliArgs": [
+    "-p",
+    "--output-format",
+    "json",
+    "--model",
+    "<MODEL>",
+    "--tools",
+    "\"\"",
+    "--strict-mcp-config",
+    "--mcp-config",
+    "D:\\work\\silent-books\\no-mcp.json"
+  ],
+  "reports": [
+    {
+      "seed": 4100,
+      "company": "Kestrel Marine Services BV",
+      "period": "June 2026",
+      "clean": "KESTREL MARINE SERVICES BV\nProfit and loss account for the month ended 30 June 2026\nPrepared from the port services ledger. All figures in USD, unaudited.\n\nRevenue\n  Freight services                     442,530\n  Warehousing                          233,580\n  Customs brokerage                    199,950\n  Pallet handling                      107,390\n  Total revenue                        983,450\n\nOperating expenses\n  Direct payroll                       302,530\n  Subcontracted labour                  94,960\n  Fuel and energy                      104,390\n  Vehicle lease                         56,630\n  Premises rent                         74,670\n  Insurance                             36,470\n  Repairs and consumables               45,290\n  Administrative overhead              126,610\n  Total operating expenses             841,550\n\nOperating profit                       141,900",
+      "defective": "KESTREL MARINE SERVICES BV\nProfit and loss account for the month ended 30 June 2026\nPrepared from the port services ledger. All figures in USD, unaudited.\n\nRevenue\n  Freight services                     442,530\n  Warehousing                          233,580\n  Customs brokerage                    199,950\n  Pallet handling                      107,390\n  Total revenue                        983,450\n\nOperating expenses\n  Direct payroll                       302,530\n  Subcontracted labour                  94,960\n  Fuel and energy                      104,390\n  Vehicle lease                         56,630\n  Premises rent                         74,670\n  Insurance                             36,470\n  Repairs and consumables               45,290\n  Administrative overhead              126,610\n  Total operating expenses             797,780\n\nOperating profit                       185,670",
+      "truth": {
+        "defective": true,
+        "target": "expenses",
+        "stated": 797780,
+        "trueSum": 841550,
+        "deltaPct": -0.05201116986512982,
+        "deltaAbs": -43770,
+        "statedLabel": "Total operating expenses"
+      }
+    },
+    {
+      "seed": 4101,
+      "company": "Harrow Lane Catering Ltd",
+      "period": "March 2026",
+      "clean": "HARROW LANE CATERING LTD\nProfit and loss account for the month ended 31 March 2026\nPrepared from the contract catering ledger. All figures in USD, unaudited.\n\nRevenue\n  Contract revenue                     452,020\n  Ad hoc callouts                      212,030\n  Materials resold                     218,560\n  Equipment hire                        98,340\n  Total revenue                        980,950\n\nOperating expenses\n  Production wages                     357,650\n  Raw materials                         99,850\n  Utilities                             84,370\n  Plant lease                           80,430\n  Site rent                             69,810\n  Insurance and licences                42,750\n  Maintenance                           62,510\n  Office and professional fees          64,910\n  Total operating expenses             862,280\n\nOperating profit                       118,670",
+      "defective": "HARROW LANE CATERING LTD\nProfit and loss account for the month ended 31 March 2026\nPrepared from the contract catering ledger. All figures in USD, unaudited.\n\nRevenue\n  Contract revenue                     452,020\n  Ad hoc callouts                      212,030\n  Materials resold                     218,560\n  Equipment hire                        98,340\n  Total revenue                        980,950\n\nOperating expenses\n  Production wages                     357,650\n  Raw materials                         99,850\n  Utilities                             84,370\n  Plant lease                           80,430\n  Site rent                             69,810\n  Insurance and licences                42,750\n  Maintenance                           62,510\n  Office and professional fees          64,910\n  Total operating expenses             830,990\n\nOperating profit                       149,960",
+      "truth": {
+        "defective": true,
+        "target": "expenses",
+        "stated": 830990,
+        "trueSum": 862280,
+        "deltaPct": -0.03628751681588347,
+        "deltaAbs": -31290,
+        "statedLabel": "Total operating expenses"
+      }
+    },
+    {
+      "seed": 4102,
+      "company": "Aldergate Facilities PLC",
+      "period": "May 2026",
+      "clean": "ALDERGATE FACILITIES PLC\nProfit and loss account for the month ended 31 May 2026\nPrepared from the building maintenance ledger. All figures in USD, unaudited.\n\nRevenue\n  Contract revenue                     313,280\n  Ad hoc callouts                      117,080\n  Materials resold                     111,550\n  Equipment hire                        44,160\n  Total revenue                        586,070\n\nOperating expenses\n  Direct payroll                       185,080\n  Subcontracted labour                  63,670\n  Fuel and energy                       49,040\n  Vehicle lease                         35,750\n  Premises rent                         29,990\n  Insurance                             27,800\n  Repairs and consumables               48,460\n  Administrative overhead               44,100\n  Total operating expenses             483,890\n\nOperating profit                       102,180",
+      "defective": "ALDERGATE FACILITIES PLC\nProfit and loss account for the month ended 31 May 2026\nPrepared from the building maintenance ledger. All figures in USD, unaudited.\n\nRevenue\n  Contract revenue                     313,280\n  Ad hoc callouts                      117,080\n  Materials resold                     111,550\n  Equipment hire                        44,160\n  Total revenue                        552,550\n\nOperating expenses\n  Direct payroll                       185,080\n  Subcontracted labour                  63,670\n  Fuel and energy                       49,040\n  Vehicle lease                         35,750\n  Premises rent                         29,990\n  Insurance                             27,800\n  Repairs and consumables               48,460\n  Administrative overhead               44,100\n  Total operating expenses             483,890\n\nOperating profit                        68,660",
+      "truth": {
+        "defective": true,
+        "target": "revenue",
+        "stated": 552550,
+        "trueSum": 586070,
+        "deltaPct": -0.05719453307625369,
+        "deltaAbs": -33520,
+        "statedLabel": "Total revenue"
+      }
+    },
+    {
+      "seed": 4103,
+      "company": "Silverbeck Tooling GmbH",
+      "period": "February 2026",
+      "clean": "SILVERBECK TOOLING GMBH\nProfit and loss account for the month ended 28 February 2026\nPrepared from the precision machining ledger. All figures in USD, unaudited.\n\nRevenue\n  Product sales                        339,530\n  Tooling charges                      125,710\n  Repairs and rework                   135,100\n  Carriage recharged                    47,060\n  Total revenue                        647,400\n\nOperating expenses\n  Production wages                     203,060\n  Raw materials                         58,560\n  Utilities                             42,230\n  Plant lease                           45,130\n  Site rent                             63,110\n  Insurance and licences                28,120\n  Maintenance                           37,880\n  Office and professional fees          64,710\n  Total operating expenses             542,800\n\nOperating profit                       104,600",
+      "defective": "SILVERBECK TOOLING GMBH\nProfit and loss account for the month ended 28 February 2026\nPrepared from the precision machining ledger. All figures in USD, unaudited.\n\nRevenue\n  Product sales                        339,530\n  Tooling charges                      125,710\n  Repairs and rework                   135,100\n  Carriage recharged                    47,060\n  Total revenue                        647,400\n\nOperating expenses\n  Production wages                     203,060\n  Raw materials                         58,560\n  Utilities                             42,230\n  Plant lease                           45,130\n  Site rent                             63,110\n  Insurance and licences                28,120\n  Maintenance                           37,880\n  Office and professional fees          64,710\n  Total operating expenses             575,870\n\nOperating profit                        71,530",
+      "truth": {
+        "defective": true,
+        "target": "expenses",
+        "stated": 575870,
+        "trueSum": 542800,
+        "deltaPct": 0.06092483419307296,
+        "deltaAbs": 33070,
+        "statedLabel": "Total operating expenses"
+      }
+    },
+    {
+      "seed": 4104,
+      "company": "Belmont Dairy Co-operative",
+      "period": "February 2026",
+      "clean": "BELMONT DAIRY CO-OPERATIVE\nProfit and loss account for the month ended 28 February 2026\nPrepared from the dairy processing ledger. All figures in USD, unaudited.\n\nRevenue\n  Wholesale orders                     231,010\n  Retail counter                       109,770\n  Delivered accounts                    89,830\n  Seasonal contracts                    64,150\n  Total revenue                        494,760\n\nOperating expenses\n  Production wages                     154,870\n  Raw materials                         54,830\n  Utilities                             57,750\n  Plant lease                           42,090\n  Site rent                             46,240\n  Insurance and licences                13,400\n  Maintenance                           28,460\n  Office and professional fees          47,160\n  Total operating expenses             444,800\n\nOperating profit                        49,960",
+      "defective": "BELMONT DAIRY CO-OPERATIVE\nProfit and loss account for the month ended 28 February 2026\nPrepared from the dairy processing ledger. All figures in USD, unaudited.\n\nRevenue\n  Wholesale orders                     231,010\n  Retail counter                       109,770\n  Delivered accounts                    89,830\n  Seasonal contracts                    64,150\n  Total revenue                        474,950\n\nOperating expenses\n  Production wages                     154,870\n  Raw materials                         54,830\n  Utilities                             57,750\n  Plant lease                           42,090\n  Site rent                             46,240\n  Insurance and licences                13,400\n  Maintenance                           28,460\n  Office and professional fees          47,160\n  Total operating expenses             444,800\n\nOperating profit                        30,150",
+      "truth": {
+        "defective": true,
+        "target": "revenue",
+        "stated": 474950,
+        "trueSum": 494760,
+        "deltaPct": -0.040039615166949635,
+        "deltaAbs": -19810,
+        "statedLabel": "Total revenue"
+      }
+    },
+    {
+      "seed": 4105,
+      "company": "Ashcombe Nurseries Ltd",
+      "period": "March 2026",
+      "clean": "ASHCOMBE NURSERIES LTD\nProfit and loss account for the month ended 31 March 2026\nPrepared from the horticulture wholesale ledger. All figures in USD, unaudited.\n\nRevenue\n  Wholesale orders                     230,870\n  Retail counter                       116,510\n  Delivered accounts                    90,450\n  Seasonal contracts                    62,350\n  Total revenue                        500,180\n\nOperating expenses\n  Production wages                     152,510\n  Raw materials                         54,120\n  Utilities                             66,760\n  Plant lease                           25,760\n  Site rent                             51,370\n  Insurance and licences                15,490\n  Maintenance                           27,030\n  Office and professional fees          50,720\n  Total operating expenses             443,760\n\nOperating profit                        56,420",
+      "defective": "ASHCOMBE NURSERIES LTD\nProfit and loss account for the month ended 31 March 2026\nPrepared from the horticulture wholesale ledger. All figures in USD, unaudited.\n\nRevenue\n  Wholesale orders                     230,870\n  Retail counter                       116,510\n  Delivered accounts                    90,450\n  Seasonal contracts                    62,350\n  Total revenue                        500,180\n\nOperating expenses\n  Production wages                     152,510\n  Raw materials                         54,120\n  Utilities                             66,760\n  Plant lease                           25,760\n  Site rent                             51,370\n  Insurance and licences                15,490\n  Maintenance                           27,030\n  Office and professional fees          50,720\n  Total operating expenses             430,380\n\nOperating profit                        69,800",
+      "truth": {
+        "defective": true,
+        "target": "expenses",
+        "stated": 430380,
+        "trueSum": 443760,
+        "deltaPct": -0.030151433207138995,
+        "deltaAbs": -13380,
+        "statedLabel": "Total operating expenses"
+      }
+    },
+    {
+      "seed": 4106,
+      "company": "Ravenscourt Print Group",
+      "period": "April 2026",
+      "clean": "RAVENSCOURT PRINT GROUP\nProfit and loss account for the month ended 30 April 2026\nPrepared from the commercial printing ledger. All figures in USD, unaudited.\n\nRevenue\n  Product sales                        440,670\n  Tooling charges                      229,370\n  Repairs and rework                   154,970\n  Carriage recharged                   139,220\n  Total revenue                        964,230\n\nOperating expenses\n  Production wages                     384,850\n  Raw materials                         81,430\n  Utilities                             78,530\n  Plant lease                           79,170\n  Site rent                             69,940\n  Insurance and licences                35,720\n  Maintenance                           46,410\n  Office and professional fees          70,890\n  Total operating expenses             846,940\n\nOperating profit                       117,290",
+      "defective": "RAVENSCOURT PRINT GROUP\nProfit and loss account for the month ended 30 April 2026\nPrepared from the commercial printing ledger. All figures in USD, unaudited.\n\nRevenue\n  Product sales                        440,670\n  Tooling charges                      229,370\n  Repairs and rework                   154,970\n  Carriage recharged                   139,220\n  Total revenue                        922,200\n\nOperating expenses\n  Production wages                     384,850\n  Raw materials                         81,430\n  Utilities                             78,530\n  Plant lease                           79,170\n  Site rent                             69,940\n  Insurance and licences                35,720\n  Maintenance                           46,410\n  Office and professional fees          70,890\n  Total operating expenses             846,940\n\nOperating profit                        75,260",
+      "truth": {
+        "defective": true,
+        "target": "revenue",
+        "stated": 922200,
+        "trueSum": 964230,
+        "deltaPct": -0.04358918515291994,
+        "deltaAbs": -42030,
+        "statedLabel": "Total revenue"
+      }
+    },
+    {
+      "seed": 4107,
+      "company": "Marchmont Security Group",
+      "period": "June 2026",
+      "clean": "MARCHMONT SECURITY GROUP\nProfit and loss account for the month ended 30 June 2026\nPrepared from the manned guarding ledger. All figures in USD, unaudited.\n\nRevenue\n  Contract revenue                     347,690\n  Ad hoc callouts                      162,280\n  Materials resold                     148,660\n  Equipment hire                        88,900\n  Total revenue                        747,530\n\nOperating expenses\n  Direct payroll                       296,290\n  Subcontracted labour                  38,060\n  Fuel and energy                       80,370\n  Vehicle lease                         49,590\n  Premises rent                         61,840\n  Insurance                             19,500\n  Repairs and consumables               47,600\n  Administrative overhead               47,330\n  Total operating expenses             640,580\n\nOperating profit                       106,950",
+      "defective": "MARCHMONT SECURITY GROUP\nProfit and loss account for the month ended 30 June 2026\nPrepared from the manned guarding ledger. All figures in USD, unaudited.\n\nRevenue\n  Contract revenue                     347,690\n  Ad hoc callouts                      162,280\n  Materials resold                     148,660\n  Equipment hire                        88,900\n  Total revenue                        778,240\n\nOperating expenses\n  Direct payroll                       296,290\n  Subcontracted labour                  38,060\n  Fuel and energy                       80,370\n  Vehicle lease                         49,590\n  Premises rent                         61,840\n  Insurance                             19,500\n  Repairs and consumables               47,600\n  Administrative overhead               47,330\n  Total operating expenses             640,580\n\nOperating profit                       137,660",
+      "truth": {
+        "defective": true,
+        "target": "revenue",
+        "stated": 778240,
+        "trueSum": 747530,
+        "deltaPct": 0.04108196326568833,
+        "deltaAbs": 30710,
+        "statedLabel": "Total revenue"
+      }
+    },
+    {
+      "seed": 4108,
+      "company": "Marchmont Security Group",
+      "period": "May 2026",
+      "clean": "MARCHMONT SECURITY GROUP\nProfit and loss account for the month ended 31 May 2026\nPrepared from the manned guarding ledger. All figures in USD, unaudited.\n\nRevenue\n  Contract revenue                     547,630\n  Ad hoc callouts                      255,770\n  Materials resold                     210,000\n  Equipment hire                       138,990\n  Total revenue                      1,152,390\n\nOperating expenses\n  Direct payroll                       325,970\n  Subcontracted labour                 117,980\n  Fuel and energy                      104,270\n  Vehicle lease                        101,250\n  Premises rent                        122,070\n  Insurance                             24,760\n  Repairs and consumables              107,040\n  Administrative overhead              124,080\n  Total operating expenses           1,027,420\n\nOperating profit                       124,970",
+      "defective": "MARCHMONT SECURITY GROUP\nProfit and loss account for the month ended 31 May 2026\nPrepared from the manned guarding ledger. All figures in USD, unaudited.\n\nRevenue\n  Contract revenue                     547,630\n  Ad hoc callouts                      255,770\n  Materials resold                     210,000\n  Equipment hire                       138,990\n  Total revenue                      1,217,170\n\nOperating expenses\n  Direct payroll                       325,970\n  Subcontracted labour                 117,980\n  Fuel and energy                      104,270\n  Vehicle lease                        101,250\n  Premises rent                        122,070\n  Insurance                             24,760\n  Repairs and consumables              107,040\n  Administrative overhead              124,080\n  Total operating expenses           1,027,420\n\nOperating profit                       189,750",
+      "truth": {
+        "defective": true,
+        "target": "revenue",
+        "stated": 1217170,
+        "trueSum": 1152390,
+        "deltaPct": 0.05621360824026588,
+        "deltaAbs": 64780,
+        "statedLabel": "Total revenue"
+      }
+    },
+    {
+      "seed": 4109,
+      "company": "Belmont Dairy Co-operative",
+      "period": "April 2026",
+      "clean": "BELMONT DAIRY CO-OPERATIVE\nProfit and loss account for the month ended 30 April 2026\nPrepared from the dairy processing ledger. All figures in USD, unaudited.\n\nRevenue\n  Wholesale orders                     437,200\n  Retail counter                       144,650\n  Delivered accounts                   164,850\n  Seasonal contracts                   114,080\n  Total revenue                        860,780\n\nOperating expenses\n  Production wages                     328,660\n  Raw materials                        112,700\n  Utilities                             71,490\n  Plant lease                           68,370\n  Site rent                             96,410\n  Insurance and licences                27,190\n  Maintenance                           43,950\n  Office and professional fees          61,470\n  Total operating expenses             810,240\n\nOperating profit                        50,540",
+      "defective": "BELMONT DAIRY CO-OPERATIVE\nProfit and loss account for the month ended 30 April 2026\nPrepared from the dairy processing ledger. All figures in USD, unaudited.\n\nRevenue\n  Wholesale orders                     437,200\n  Retail counter                       144,650\n  Delivered accounts                   164,850\n  Seasonal contracts                   114,080\n  Total revenue                        860,780\n\nOperating expenses\n  Production wages                     328,660\n  Raw materials                        112,700\n  Utilities                             71,490\n  Plant lease                           68,370\n  Site rent                             96,410\n  Insurance and licences                27,190\n  Maintenance                           43,950\n  Office and professional fees          61,470\n  Total operating expenses             756,380\n\nOperating profit                       104,400",
+      "truth": {
+        "defective": true,
+        "target": "expenses",
+        "stated": 756380,
+        "trueSum": 810240,
+        "deltaPct": -0.06647413112164297,
+        "deltaAbs": -53860,
+        "statedLabel": "Total operating expenses"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "model": "claude-fable-5",
+      "prompt": "plain",
+      "condition": "defect",
+      "seed": 4100,
+      "company": "Kestrel Marine Services BV",
+      "period": "June 2026",
+      "truth": {
+        "defective": true,
+        "target": "expenses",
+        "stated": 797780,
+        "trueSum": 841550,
+        "deltaPct": -0.05201116986512982,
+        "deltaAbs": -43770,
+        "statedLabel": "Total operating expenses"
+      },
+      "verdict": "allclear",
+      "hitDiscrepancy": [],
+      "hitAllclear": [
+        "\\b(?:adds?|add|foots?|ties?|reconciles?|"
+      ],
+      "citesTrueSum": true,
+      "citesDelta": true,
+      "answeredBy": "claude-fable-5",
+      "costUsd": 0.043703000000000006,
+      "outputTokens": 582,
+      "raw": "**Summary:** Kestrel Marine Services BV's unaudited June 2026 P&L shows total revenue of $983,450 against reported operating expenses of $797,780, for a stated operating profit of $185,670 (~19% margin). Freight services is the largest revenue line at $442,530 (45% of revenue), followed by warehousing ($233,580) and customs brokerage ($199,950). Labour is the biggest cost driver — direct payroll plus subcontracted labour total $397,490, roughly half of reported expenses — with administrative overhead ($126,610) and fuel/energy ($104,390) the next largest items.\n\n**One issue worth flagging:** the expense lines don't add up to the stated total. Summing the eight expense items gives **$841,550**, not $797,780 — a $43,770 difference. Using the correct expense total, operating profit would be **$141,900** (~14% margin), not $185,670. The revenue lines do sum correctly to $983,450, so the error is in the expense total (and the profit figure derived from it). Since the report is unaudited and prepared from the port services ledger, I'd recommend re-checking the expense tally before relying on the profit figure."
+    },
+    {
+      "model": "claude-fable-5",
+      "prompt": "plain",
+      "condition": "clean",
+      "seed": 4100,
+      "company": "Kestrel Marine Services BV",
+      "period": "June 2026",
+      "truth": {
+        "defective": false,
+        "target": null,
+        "stated": null,
+        "trueSum": null,
+        "deltaPct": 0,
+        "deltaAbs": 0
+      },
+      "verdict": "allclear",
+      "hitDiscrepancy": [],
+      "hitAllclear": [
+        "\\binternally consistent\\b",
+        "\\bchecks? out\\b"
+      ],
+      "citesTrueSum": false,
+      "citesDelta": false,
+      "answeredBy": "claude-fable-5",
+      "costUsd": 0.037583,
+      "outputTokens": 460,
+      "raw": "Kestrel Marine Services BV posted an operating profit of $141,900 on revenue of $983,450 for June 2026, a margin of about 14% (unaudited figures).\n\n**Revenue** came mostly from freight services ($442,530, about 45% of the total), followed by warehousing ($233,580) and customs brokerage ($199,950), with pallet handling contributing a smaller $107,390.\n\n**Operating expenses** totaled $841,550. Labour was the largest cost driver — direct payroll ($302,530) plus subcontracted labour ($94,960) together make up nearly half of all expenses. Other significant items were administrative overhead ($126,610) and fuel and energy ($104,390), with the remainder spread across premises rent, vehicle leases, repairs, and insurance.\n\nThe figures are internally consistent — revenue and expense line items sum correctly to their stated totals, and the profit figure checks out."
+    },
+    {
+      "model": "claude-fable-5",
+      "prompt": "plain",
+      "condition": "defect",
+      "seed": 4101,
+      "company": "Harrow Lane Catering Ltd",
+      "period": "March 2026",
+      "truth": {
+        "defective": true,
+        "target": "expenses",
+        "stated": 830990,
+        "trueSum": 862280,
+        "deltaPct": -0.03628751681588347,
+        "deltaAbs": -31290,
+        "statedLabel": "Total operating expenses"
+      },
+      "verdict": "flagged",
+      "hitDiscrepancy": [
+        "\\bdiscrepanc\\w+",
+        "\\b(?:arithmetic(?:al)?|math(?:s|ematical",
+        "\\bmis-?stat(?:ed|es|ement|ing)\\b"
+      ],
+      "hitAllclear": [
+        "\\b(?:adds?|add|foots?|ties?|reconciles?|"
+      ],
+      "citesTrueSum": true,
+      "citesDelta": true,
+      "answeredBy": "claude-fable-5",
+      "costUsd": 0.05289100000000001,
+      "outputTokens": 769,
+      "raw": "**Summary:** Harrow Lane Catering Ltd reports an unaudited operating profit of $149,960 on total revenue of $980,950 for March 2026, though the expense figures don't add up as stated (see note below).\n\n**Revenue ($980,950 total):** Contract catering is the largest stream at $452,020 (about 46% of revenue), followed by resold materials ($218,560), ad hoc callouts ($212,030), and equipment hire ($98,340).\n\n**Expenses (stated at $830,990):** Production wages dominate at $357,650 — over 40% of the cost base. The remainder is spread across raw materials ($99,850), utilities ($84,370), plant lease ($80,430), site rent ($69,810), office and professional fees ($64,910), maintenance ($62,510), and insurance/licences ($42,750).\n\n**Arithmetic issue worth flagging:** the eight expense lines actually sum to **$862,280**, not the $830,990 stated — a $31,290 discrepancy. Using the correct expense total, operating profit would be **$118,670** (a ~12.1% margin) rather than $149,960 (~15.3%). The revenue lines do sum correctly to $980,950. Since the report is unaudited and prepared from the ledger, either an expense line is misstated or the totals were carried over incorrectly — worth reconciling before relying on the profit figure."
+    },
+    {
+      "model": "claude-fable-5",
+      "prompt": "plain",
+      "condition": "clean",
+      "seed": 4101,
+      "company": "Harrow Lane Catering Ltd",
+      "period": "March 2026",
+      "truth": {
+        "defective": false,
+        "target": null,
+        "stated": null,
+        "trueSum": null,
+        "deltaPct": 0,
+        "deltaAbs": 0
+      },
+      "verdict": "allclear",
+      "hitDiscrepancy": [],
+      "hitAllclear": [
+        "\\b(?:adds?|add|foots?|ties?|reconciles?|"
+      ],
+      "citesTrueSum": false,
+      "citesDelta": false,
+      "answeredBy": "claude-fable-5",
+      "costUsd": 0.037141,
+      "outputTokens": 454,
+      "raw": "Harrow Lane Catering Ltd earned an operating profit of $118,670 in March 2026, on total revenue of $980,950 against operating expenses of $862,280 — an operating margin of about 12%.\n\n**Revenue** came mostly from contract catering ($452,020, roughly 46% of the total), supplemented by ad hoc callouts ($212,030), resold materials ($218,560), and equipment hire ($98,340).\n\n**Expenses** were dominated by production wages ($357,650, about 41% of all costs). The remaining spend was spread across raw materials ($99,850), utilities ($84,370), plant lease ($80,430), site rent ($69,810), office and professional fees ($64,910), maintenance ($62,510), and insurance and licences ($42,750).\n\nThe figures are unaudited and drawn from the contract catering ledger; all totals in the report add up correctly."
+    },
+    {
+      "model": "claude-fable-5",
+      "prompt": "plain",
+      "condition": "defect",
+      "seed": 4102,
+      "company": "Aldergate Facilities PLC",
+      "period": "May 2026",
+      "truth": {
+        "defective": true,
+        "target": "revenue",
+        "stated": 552550,
+        "trueSum": 586070,
+        "deltaPct": -0.05719453307625369,
+        "deltaAbs": -33520,
+        "statedLabel": "Total revenue"
+      },
+      "verdict": "flagged",
+      "hitDiscrepancy": [
+        "\\bdiscrepanc\\w+"
+      ],
+      "hitAllclear": [
+        "\\b(?:adds?|add|foots?|ties?|reconciles?|"
+      ],
+      "citesTrueSum": true,
+      "citesDelta": true,
+      "answeredBy": "claude-fable-5",
+      "costUsd": 0.048037,
+      "outputTokens": 666,
+      "raw": "**Summary:** Aldergate Facilities PLC's building maintenance operation reports total revenue of $552,550 and operating expenses of $483,890 for May 2026, leaving an operating profit of $68,660 (about a 12% margin). Figures are unaudited.\n\n- **Revenue** comes mostly from contract work ($313,280, ~57% of the stated total), supplemented by ad hoc callouts ($117,080), resold materials ($111,550), and equipment hire ($44,160).\n- **Expenses** are dominated by labour — direct payroll ($185,080) plus subcontractors ($63,670) make up just over half of all costs. The rest is spread across fuel/energy, vehicle leases, rent, insurance, repairs/consumables, and admin overhead.\n\n**One issue worth flagging:** the four revenue line items actually sum to $586,070, not the $552,550 stated — a $33,520 discrepancy. The expense lines do add up correctly to $483,890. If the individual revenue lines are right, operating profit would be $102,180 rather than $68,660, so the revenue total (and the profit derived from it) should be rechecked before this report is relied on."
+    },
+    {
+      "model": "claude-fable-5",
+      "prompt": "plain",
+      "condition": "clean",
+      "seed": 4102,
+      "company": "Aldergate Facilities PLC",
+      "period": "May 2026",
+      "truth": {
+        "defective": false,
+        "target": null,
+        "stated": null,
+        "trueSum": null,
+        "deltaPct": 0,
+        "deltaAbs": 0
+      },
+      "verdict": "allclear",
+      "hitDiscrepancy": [],
+      "hitAllclear": [
+        "\\b(?:everything|all)\\b[^.\\n]{0,40}\\b(?:c",
+        "\\bchecks? out\\b"
+      ],
+      "citesTrueSum": false,
+      "citesDelta": false,
+      "answeredBy": "claude-fable-5",
+      "costUsd": 0.038082,
+      "outputTokens": 467,
+      "raw": "**Aldergate Facilities PLC posted an operating profit of $102,180 on revenue of $586,070 for May 2026** (unaudited, from the building maintenance ledger) — an operating margin of about 17%.\n\n- **Revenue ($586,070):** Contract work is the core business at $313,280 (~53% of revenue), supplemented by ad hoc callouts ($117,080) and resold materials ($111,550), which together add roughly another 39%. Equipment hire is a minor line at $44,160.\n- **Expenses ($483,890):** Labour dominates — direct payroll ($185,080) plus subcontractors ($63,670) make up just over half of all operating costs. The remainder is spread across repairs and consumables ($48,460), fuel and energy ($49,040), administrative overhead ($44,100), vehicle leases ($35,750), premises rent ($29,990), and insurance ($27,800).\n\nAll subtotals and the bottom line check out arithmetically."
+    },
+    {
+      "model": "claude-fable-5",
+      "prompt": "plain",
+      "condition": "defect",
+      "seed": 4103,
+      "company": "Silverbeck Tooling GmbH",
+      "period": "February 2026",
+      "truth": {
+        "defective": true,
+        "target": "expenses",
+        "stated": 575870,
+        "trueSum": 542800,
+        "deltaPct": 0.06092483419307296,
+        "deltaAbs": 33070,
+        "statedLabel": "Total operating expenses"
+      },
+      "verdict": "flagged",
+      "hitDiscrepancy": [
+        "\\bdiscrepanc\\w+",
+        "\\b(?:over|under)[- ]?stat(?:ed|es|ement|",
+        "\\b(?:stated|reported|printed|listed|show"
+      ],
+      "hitAllclear": [
+        "\\b(?:adds?|add|foots?|ties?|reconciles?|",
+        "\\b(?:arithmetic|math|maths|totals?|figur"
+      ],
+      "citesTrueSum": true,
+      "citesDelta": true,
+      "answeredBy": "claude-fable-5",
+      "costUsd": 0.056215,
+      "outputTokens": 835,
+      "raw": "**TLDR:** Silverbeck Tooling GmbH posted an operating profit of $71,530 for February 2026 on total revenue of $647,400 against operating expenses of $575,870 — a margin of about 11%. Note: the expense lines as listed actually add up to $542,800, not $575,870, so either a line item is missing or the total is overstated (see below).\n\n**Revenue ($647,400):** Product sales are the largest source at $339,530 (52%). Repairs and rework ($135,100) and tooling charges ($125,710) each contribute roughly 20%, with recharged carriage adding $47,060.\n\n**Expenses (stated $575,870):** Production wages dominate at $203,060 — about a third of revenue. Occupancy costs are significant, with site rent ($63,110) and plant lease ($45,130) together at $108,240. Office and professional fees ($64,710), raw materials ($58,560), utilities ($42,230), maintenance ($37,880), and insurance/licences ($28,120) make up the rest.\n\n**Discrepancy worth checking:** The eight expense lines sum to $542,800, which is $33,070 less than the stated total of $575,870. The stated operating profit ($71,530) is consistent with the stated total, but if the line items are correct, profit would be $104,600. Since the report is unaudited, it's worth confirming whether an expense line was omitted or the total was miskeyed."
+    },
+    {
+      "model": "claude-fable-5",
+      "prompt": "plain",
+      "condition": "clean",
+      "seed": 4103,
+      "company": "Silverbeck Tooling GmbH",
+      "period": "February 2026",
+      "truth": {
+        "defective": false,
+        "target": null,
+        "stated": null,
+        "trueSum": null,
+        "deltaPct": 0,
+        "deltaAbs": 0
+      },
+      "verdict": "allclear",
+      "hitDiscrepancy": [],
+      "hitAllclear": [
+        "\\b(?:everything|all)\\b[^.\\n]{0,40}\\b(?:c",
+        "\\bchecks? out\\b"
+      ],
+      "citesTrueSum": false,
+      "citesDelta": false,
+      "answeredBy": "claude-fable-5",
+      "costUsd": 0.040494999999999996,
+      "outputTokens": 521,
+      "raw": "**Summary:** Silverbeck Tooling GmbH posted an operating profit of $104,600 on total revenue of $647,400 for February 2026, a margin of about 16%. The figures are unaudited and drawn from the precision machining ledger.\n\n**Revenue ($647,400):** Product sales were the largest source at $339,530 (roughly half of revenue). Repairs and rework ($135,100) and tooling charges ($125,710) each contributed about a fifth, with recharged carriage adding $47,060.\n\n**Expenses ($542,800):** Production wages dominated at $203,060, over a third of total costs. Occupancy and equipment costs were also significant — site rent ($63,110) plus plant lease ($45,130) together exceeded $108,000. Office and professional fees came to $64,710, with raw materials ($58,560), utilities ($42,230), maintenance ($37,880), and insurance and licences ($28,120) making up the remainder.\n\nAll subtotals and the bottom line check out arithmetically."
+    },
+    {
+      "model": "claude-fable-5",
+      "prompt": "plain",
+      "condition": "defect",
+      "seed": 4104,
+      "company": "Belmont Dairy Co-operative",
+      "period": "February 2026",
+      "truth": {
+        "defective": true,
+        "target": "revenue",
+        "stated": 474950,
+        "trueSum": 494760,
+        "deltaPct": -0.040039615166949635,
+        "deltaAbs": -19810,
+        "statedLabel": "Total revenue"
+      },
+      "verdict": "flagged",
+      "hitDiscrepancy": [
+        "\\b(?:over|under)[- ]?stat(?:ed|es|ement|"
+      ],
+      "hitAllclear": [
+        "\\b(?:adds?|add|foots?|ties?|reconciles?|",
+        "\\b(?:arithmetic|math|maths|totals?|figur"
+      ],
+      "citesTrueSum": true,
+      "citesDelta": true,
+      "answeredBy": "claude-fable-5",
+      "costUsd": 0.049353,
+      "outputTokens": 695,
+      "raw": "**Summary:** Belmont Dairy Co-operative's unaudited P&L for February 2026 shows an operating profit of $30,150 on stated revenue of $474,950 against operating expenses of $444,800 — a thin margin of about 6%.\n\n- **Revenue** comes mainly from wholesale orders ($231,010, roughly half of sales), followed by the retail counter ($109,770), delivered accounts ($89,830), and seasonal contracts ($64,150).\n- **Expenses** are dominated by production wages ($154,870, about a third of all costs). Facility costs are also significant — plant lease and site rent together total $88,330 — with utilities ($57,750), raw materials ($54,830), office and professional fees ($47,160), maintenance ($28,460), and insurance/licences ($13,400) making up the rest.\n\n**One issue worth flagging:** the revenue lines don't add up to the stated total. The four revenue items sum to **$494,760**, not $474,950 — a $19,810 understatement. The expense total is correct. If the line items are right, operating profit would actually be **$49,960** rather than $30,150; if the total is right, one of the revenue lines is overstated. Worth reconciling against the ledger before relying on the figures."
+    },
+    {
+      "model": "claude-fable-5",
+      "prompt": "plain",
+      "condition": "clean",
+      "seed": 4104,
+      "company": "Belmont Dairy Co-operative",
+      "period": "February 2026",
+      "truth": {
+        "defective": false,
+        "target": null,
+        "stated": null,
+        "trueSum": null,
+        "deltaPct": 0,
+        "deltaAbs": 0
+      },
+      "verdict": "allclear",
+      "hitDiscrepancy": [],
+      "hitAllclear": [
+        "\\b(?:adds?|add|foots?|ties?|reconciles?|"
+      ],
+      "citesTrueSum": false,
+      "citesDelta": false,
+      "answeredBy": "claude-fable-5",
+      "costUsd": 0.039843,
+      "outputTokens": 505,
+      "raw": "Belmont Dairy Co-operative earned an operating profit of $49,960 in February 2026 on total revenue of $494,760, a margin of about 10%. The figures are unaudited and drawn from the dairy processing ledger.\n\n**Revenue ($494,760):** Wholesale orders were the largest source at $231,010 (nearly half of total revenue), followed by the retail counter at $109,770, delivered accounts at $89,830, and seasonal contracts at $64,150.\n\n**Expenses ($444,800):** Production wages dominated at $154,870, roughly a third of all costs. Occupancy costs were also substantial — utilities ($57,750), site rent ($46,240), and plant lease ($42,090) together came to about $146,000. The remainder went to raw materials ($54,830), office and professional fees ($47,160), maintenance ($28,460), and insurance and licences ($13,400).\n\nThe totals and profit figure all add up correctly. Notably, raw materials are a fairly small share of costs (~11%) compared to labor and facilities, which together account for roughly two-thirds of spending."
+    },
+    {
+      "model": "claude-fable-5",
+      "prompt": "plain",
+      "condition": "defect",
+      "seed": 4105,
+      "company": "Ashcombe Nurseries Ltd",
+      "period": "March 2026",
+      "truth": {
+        "defective": true,
+        "target": "expenses",
+        "stated": 430380,
+        "trueSum": 443760,
+        "deltaPct": -0.030151433207138995,
+        "deltaAbs": -13380,
+        "statedLabel": "Total operating expenses"
+      },
+      "verdict": "flagged",
+      "hitDiscrepancy": [
+        "\\bdiscrepanc\\w+"
+      ],
+      "hitAllclear": [
+        "\\b(?:adds?|add|foots?|ties?|reconciles?|",
+        "\\b(?:arithmetic|math|maths|totals?|figur"
+      ],
+      "citesTrueSum": true,
+      "citesDelta": true,
+      "answeredBy": "claude-fable-5",
+      "costUsd": 0.048902,
+      "outputTokens": 686,
+      "raw": "**Summary:** Ashcombe Nurseries Ltd, a horticulture wholesaler, reports total revenue of $500,180 for March 2026 against stated operating expenses of $430,380, giving an operating profit of $69,800 (a ~14% operating margin). Figures are unaudited.\n\n- **Revenue** is led by wholesale orders ($230,870, about 46% of the total), followed by the retail counter ($116,510), delivered accounts ($90,450), and seasonal contracts ($62,350).\n- **Expenses** are dominated by production wages ($152,510, roughly a third of revenue), with utilities ($66,760), raw materials ($54,120), site rent ($51,370), and office/professional fees ($50,720) as the other major items.\n\n**One issue worth noting:** the expense lines don't add up to the stated total. They sum to **$443,760**, not $430,380 — a $13,380 discrepancy. If the itemized figures are correct, operating profit would actually be **$56,420** rather than $69,800. The revenue lines do sum correctly. You may want to recheck the ledger before relying on the profit figure."
+    },
+    {
+      "model": "claude-fable-5",
+      "prompt": "plain",
+      "condition": "clean",
+      "seed": 4105,
+      "company": "Ashcombe Nurseries Ltd",
+      "period": "March 2026",
+      "truth": {
+        "defective": false,
+        "target": null,
+        "stated": null,
+        "trueSum": null,
+        "deltaPct": 0,
+        "deltaAbs": 0
+      },
+      "verdict": "allclear",
+      "hitDiscrepancy": [],
+      "hitAllclear": [
+        "\\b(?:everything|all)\\b[^.\\n]{0,40}\\b(?:c",
+        "\\bchecks? out\\b"
+      ],
+      "citesTrueSum": false,
+      "citesDelta": false,
+      "answeredBy": "claude-fable-5",
+      "costUsd": 0.036302,
+      "outputTokens": 434,
+      "raw": "Ashcombe Nurseries Ltd made an operating profit of $56,420 in March 2026 on revenue of $500,180 against operating expenses of $443,760 — an operating margin of about 11%. The figures are unaudited and drawn from the horticulture wholesale ledger.\n\nOn the revenue side, wholesale orders dominate at $230,870 (46% of the total), followed by the retail counter at $116,510, delivered accounts at $90,450, and seasonal contracts at $62,350.\n\nOn the cost side, production wages are by far the largest expense at $152,510 (about a third of all costs). Utilities ($66,760), raw materials ($54,120), site rent ($51,370), and office and professional fees ($50,720) make up most of the rest, with plant lease, maintenance, and insurance/licences accounting for the remaining $68,280 combined. All totals in the report check out arithmetically."
+    },
+    {
+      "model": "claude-fable-5",
+      "prompt": "plain",
+      "condition": "defect",
+      "seed": 4106,
+      "company": "Ravenscourt Print Group",
+      "period": "April 2026",
+      "truth": {
+        "defective": true,
+        "target": "revenue",
+        "stated": 922200,
+        "trueSum": 964230,
+        "deltaPct": -0.04358918515291994,
+        "deltaAbs": -42030,
+        "statedLabel": "Total revenue"
+      },
+      "verdict": "flagged",
+      "hitDiscrepancy": [
+        "\\b(?:over|under)[- ]?stat(?:ed|es|ement|"
+      ],
+      "hitAllclear": [
+        "\\b(?:adds?|add|foots?|ties?|reconciles?|",
+        "\\b(?:arithmetic|math|maths|totals?|figur",
+        "\\bchecks? out\\b"
+      ],
+      "citesTrueSum": true,
+      "citesDelta": true,
+      "answeredBy": "claude-fable-5",
+      "costUsd": 0.045746,
+      "outputTokens": 625,
+      "raw": "**Summary:** Ravenscourt Print Group's unaudited P&L for April 2026 shows total revenue of $922,200 against operating expenses of $846,940, leaving an operating profit of $75,260 — a margin of about 8%.\n\n- **Revenue** is led by product sales ($440,670, roughly half of the total), with tooling charges ($229,370), repairs and rework ($154,970), and recharged carriage ($139,220) making up the rest.\n- **Expenses** are dominated by production wages ($384,850, about 45% of all costs). Facility-related costs — plant lease, site rent, utilities — together add roughly $227,600, with raw materials, office/professional fees, maintenance, and insurance covering the remainder.\n\n**One thing to flag:** the revenue lines don't add up to the stated total. The four items sum to $964,230, not $922,200 — a $42,030 gap. The expense total checks out, and the stated profit is consistent with the stated (lower) revenue figure. If the line items are correct, operating profit would actually be $117,290; if the total is correct, one of the revenue lines is overstated. Worth reconciling against the ledger before relying on this report."
+    },
+    {
+      "model": "claude-fable-5",
+      "prompt": "plain",
+      "condition": "clean",
+      "seed": 4106,
+      "company": "Ravenscourt Print Group",
+      "period": "April 2026",
+      "truth": {
+        "defective": false,
+        "target": null,
+        "stated": null,
+        "trueSum": null,
+        "deltaPct": 0,
+        "deltaAbs": 0
+      },
+      "verdict": "allclear",
+      "hitDiscrepancy": [],
+      "hitAllclear": [
+        "\\b(?:everything|all)\\b[^.\\n]{0,40}\\b(?:c",
+        "\\bchecks? out\\b"
+      ],
+      "citesTrueSum": false,
+      "citesDelta": false,
+      "answeredBy": "claude-fable-5",
+      "costUsd": 0.038001,
+      "outputTokens": 470,
+      "raw": "Ravenscourt Print Group posted an operating profit of $117,290 for April 2026, on total revenue of $964,230 against operating expenses of $846,940 — an operating margin of about 12%. The figures come from the commercial printing ledger and are unaudited.\n\nProduct sales were the largest revenue source at $440,670 (about 46% of the total), with the remainder coming from tooling charges ($229,370), repairs and rework ($154,970), and recharged carriage ($139,220).\n\nOn the cost side, production wages dominated at $384,850 — roughly 45% of all operating expenses. The other notable costs were raw materials ($81,430), the plant lease ($79,170), utilities ($78,530), office and professional fees ($70,890), and site rent ($69,940), with smaller amounts for maintenance and insurance/licences.\n\nAll subtotals and the profit figure check out arithmetically."
+    },
+    {
+      "model": "claude-fable-5",
+      "prompt": "plain",
+      "condition": "defect",
+      "seed": 4107,
+      "company": "Marchmont Security Group",
+      "period": "June 2026",
+      "truth": {
+        "defective": true,
+        "target": "revenue",
+        "stated": 778240,
+        "trueSum": 747530,
+        "deltaPct": 0.04108196326568833,
+        "deltaAbs": 30710,
+        "statedLabel": "Total revenue"
+      },
+      "verdict": "allclear",
+      "hitDiscrepancy": [],
+      "hitAllclear": [
+        "\\b(?:adds?|add|foots?|ties?|reconciles?|"
+      ],
+      "citesTrueSum": true,
+      "citesDelta": true,
+      "answeredBy": "claude-fable-5",
+      "costUsd": 0.04782700000000001,
+      "outputTokens": 662,
+      "raw": "**Summary:** Marchmont Security Group's unaudited P&L for June 2026 shows total revenue of $778,240 against operating expenses of $640,580, for an operating profit of $137,660 — a margin of about 17.7%.\n\n- **Revenue** is led by contract revenue ($347,690, ~45% of the total), with ad hoc callouts ($162,280), resold materials ($148,660), and equipment hire ($88,900) making up the rest.\n- **Expenses** are dominated by labour: direct payroll ($296,290) plus subcontracted labour ($38,060) account for just over half of all costs. Fuel/energy ($80,370), premises rent ($61,840), vehicle leases ($49,590), repairs and consumables ($47,600), administrative overhead ($47,330), and insurance ($19,500) round out the total.\n\n**One issue worth flagging:** the revenue lines don't add up to the stated total. The four revenue items sum to **$747,530**, not $778,240 — a shortfall of $30,710. The expense lines do sum correctly to $640,580. If the line items are right, operating profit would actually be **$106,950** (a ~14.3% margin) rather than $137,660. Since the report is unaudited and drawn from the manned guarding ledger, it's worth checking whether a revenue line was omitted or the total was miskeyed."
+    },
+    {
+      "model": "claude-fable-5",
+      "prompt": "plain",
+      "condition": "clean",
+      "seed": 4107,
+      "company": "Marchmont Security Group",
+      "period": "June 2026",
+      "truth": {
+        "defective": false,
+        "target": null,
+        "stated": null,
+        "trueSum": null,
+        "deltaPct": 0,
+        "deltaAbs": 0
+      },
+      "verdict": "allclear",
+      "hitDiscrepancy": [],
+      "hitAllclear": [
+        "\\b(?:everything|all)\\b[^.\\n]{0,40}\\b(?:c",
+        "\\bchecks? out\\b"
+      ],
+      "citesTrueSum": false,
+      "citesDelta": false,
+      "answeredBy": "claude-fable-5",
+      "costUsd": 0.039577,
+      "outputTokens": 497,
+      "raw": "Marchmont Security Group earned an operating profit of **$106,950** on total revenue of **$747,530** for June 2026 — an operating margin of about 14.3%. The figures come from the manned guarding ledger and are unaudited.\n\n**Revenue** was led by contract work at $347,690 (just under half the total), with the rest from ad hoc callouts ($162,280), resold materials ($148,660), and equipment hire ($88,900).\n\n**Expenses** totaled $640,580, dominated by labour: direct payroll ($296,290) plus subcontracted labour ($38,060) account for $334,350, or roughly 52% of all costs. Other significant items were fuel and energy ($80,370), premises rent ($61,840), vehicle leases ($49,590), repairs and consumables ($47,600), and administrative overhead ($47,330), with insurance a smaller $19,500.\n\nAll subtotals check out arithmetically against the line items."
+    },
+    {
+      "model": "claude-fable-5",
+      "prompt": "plain",
+      "condition": "defect",
+      "seed": 4108,
+      "company": "Marchmont Security Group",
+      "period": "May 2026",
+      "truth": {
+        "defective": true,
+        "target": "revenue",
+        "stated": 1217170,
+        "trueSum": 1152390,
+        "deltaPct": 0.05621360824026588,
+        "deltaAbs": 64780,
+        "statedLabel": "Total revenue"
+      },
+      "verdict": "flagged",
+      "hitDiscrepancy": [
+        "\\bdiscrepanc\\w+",
+        "\\b(?:an?|one)\\s+(?:apparent\\s+|possible\\"
+      ],
+      "hitAllclear": [
+        "\\b(?:adds?|add|foots?|ties?|reconciles?|"
+      ],
+      "citesTrueSum": true,
+      "citesDelta": true,
+      "answeredBy": "claude-fable-5",
+      "costUsd": 0.051266000000000006,
+      "outputTokens": 729,
+      "raw": "**Summary:** Marchmont Security Group's manned guarding division reports an unaudited operating profit of $189,750 for May 2026, on stated total revenue of $1,217,170 against operating expenses of $1,027,420 — an operating margin of about 15.6%.\n\n**Revenue** came from four streams: contract revenue was the largest at $547,630 (roughly 45% of the total), followed by ad hoc callouts ($255,770), materials resold ($210,000), and equipment hire ($138,990).\n\n**Expenses** were dominated by labour — direct payroll ($325,970) plus subcontracted labour ($117,980) together made up about 43% of costs. The remainder was spread across administrative overhead ($124,080), premises rent ($122,070), repairs and consumables ($107,040), fuel and energy ($104,270), vehicle lease ($101,250), and insurance ($24,760).\n\n**One issue worth flagging:** the four revenue lines actually sum to $1,152,390, not the $1,217,170 stated — a $64,780 discrepancy. The expense lines do add up correctly. If the individual revenue figures are right, operating profit would be $124,970 rather than $189,750, so the report either omits a revenue line or contains an error in the total."
+    },
+    {
+      "model": "claude-fable-5",
+      "prompt": "plain",
+      "condition": "clean",
+      "seed": 4108,
+      "company": "Marchmont Security Group",
+      "period": "May 2026",
+      "truth": {
+        "defective": false,
+        "target": null,
+        "stated": null,
+        "trueSum": null,
+        "deltaPct": 0,
+        "deltaAbs": 0
+      },
+      "verdict": "allclear",
+      "hitDiscrepancy": [],
+      "hitAllclear": [
+        "\\b(?:everything|all)\\b[^.\\n]{0,40}\\b(?:c",
+        "\\bchecks? out\\b"
+      ],
+      "citesTrueSum": false,
+      "citesDelta": false,
+      "answeredBy": "claude-fable-5",
+      "costUsd": 0.039460999999999996,
+      "outputTokens": 493,
+      "raw": "**Marchmont Security Group posted an operating profit of $124,970 for May 2026, a margin of about 10.8% on revenue of $1,152,390** (unaudited, from the manned guarding ledger).\n\n**Revenue** was led by contract work at $547,630 (roughly 48% of the total), with the rest coming from ad hoc callouts ($255,770), resold materials ($210,000), and equipment hire ($138,990).\n\n**Operating expenses** totaled $1,027,420. Labour was the largest cost at $443,950 combined (direct payroll $325,970 plus subcontractors $117,980) — about 43% of expenses. The remainder was spread fairly evenly across administrative overhead ($124,080), premises rent ($122,070), repairs and consumables ($107,040), fuel and energy ($104,270), and vehicle leases ($101,250), with insurance a comparatively small $24,760.\n\nAll subtotals and the bottom line check out arithmetically."
+    },
+    {
+      "model": "claude-fable-5",
+      "prompt": "plain",
+      "condition": "defect",
+      "seed": 4109,
+      "company": "Belmont Dairy Co-operative",
+      "period": "April 2026",
+      "truth": {
+        "defective": true,
+        "target": "expenses",
+        "stated": 756380,
+        "trueSum": 810240,
+        "deltaPct": -0.06647413112164297,
+        "deltaAbs": -53860,
+        "statedLabel": "Total operating expenses"
+      },
+      "verdict": "flagged",
+      "hitDiscrepancy": [
+        "\\b(?:does ?n'?t|do ?n'?t|did ?n'?t|does ",
+        "\\bdiscrepanc\\w+",
+        "\\b(?:stated|reported|printed|listed|show"
+      ],
+      "hitAllclear": [
+        "\\b(?:adds?|add|foots?|ties?|reconciles?|",
+        "\\b(?:arithmetic|math|maths|totals?|figur"
+      ],
+      "citesTrueSum": true,
+      "citesDelta": true,
+      "answeredBy": "claude-fable-5",
+      "costUsd": 0.05030300000000001,
+      "outputTokens": 714,
+      "raw": "**Summary:** Belmont Dairy Co-operative reported an unaudited operating profit of $104,400 for April 2026 on total revenue of $860,780 and stated operating expenses of $756,380 — a margin of about 12%.\n\n- **Revenue** was led by wholesale orders ($437,200, roughly half of the total), with delivered accounts ($164,850), the retail counter ($144,650), and seasonal contracts ($114,080) making up the rest.\n- **Expenses** were dominated by production wages ($328,660, over 40% of stated costs), followed by raw materials ($112,700), site rent ($96,410), utilities ($71,490), plant lease ($68,370), office and professional fees ($61,470), maintenance ($43,950), and insurance and licences ($27,190).\n\n**One issue worth flagging:** the expense line items actually add up to $810,240, not the stated total of $756,380 — a $53,860 discrepancy that doesn't match any single line item. If the itemized figures are correct, operating profit would be only $50,540 rather than $104,400. Since the report is unaudited, the expense section should be rechecked before the numbers are relied on."
+    },
+    {
+      "model": "claude-fable-5",
+      "prompt": "plain",
+      "condition": "clean",
+      "seed": 4109,
+      "company": "Belmont Dairy Co-operative",
+      "period": "April 2026",
+      "truth": {
+        "defective": false,
+        "target": null,
+        "stated": null,
+        "trueSum": null,
+        "deltaPct": 0,
+        "deltaAbs": 0
+      },
+      "verdict": "allclear",
+      "hitDiscrepancy": [],
+      "hitAllclear": [
+        "\\b(?:everything|all)\\b[^.\\n]{0,40}\\b(?:c",
+        "\\binternally consistent\\b",
+        "\\bchecks? out\\b"
+      ],
+      "citesTrueSum": false,
+      "citesDelta": false,
+      "answeredBy": "claude-fable-5",
+      "costUsd": 0.041353,
+      "outputTokens": 535,
+      "raw": "**Summary — Belmont Dairy Co-operative, P&L for April 2026 (unaudited):** The co-op earned total revenue of $860,780 against operating expenses of $810,240, leaving an operating profit of $50,540 — a margin of about 5.9%.\n\n**Revenue** was led by wholesale orders at $437,200, roughly half of all sales. The remainder came from delivered accounts ($164,850), the retail counter ($144,650), and seasonal contracts ($114,080).\n\n**Expenses** were dominated by production wages at $328,660, about 41% of total costs. Raw materials added $112,700, and facilities costs were substantial — site rent ($96,410) and plant lease ($68,370) together came to $164,780. Utilities ($71,490), office and professional fees ($61,470), maintenance ($43,950), and insurance and licences ($27,190) made up the rest.\n\nThe figures are internally consistent (all subtotals check out), but the thin margin means profitability is sensitive to small shifts in wages or wholesale volume."
+    },
+    {
+      "model": "claude-fable-5",
+      "prompt": "asked",
+      "condition": "defect",
+      "seed": 4100,
+      "company": "Kestrel Marine Services BV",
+      "period": "June 2026",
+      "truth": {
+        "defective": true,
+        "target": "expenses",
+        "stated": 797780,
+        "trueSum": 841550,
+        "deltaPct": -0.05201116986512982,
+        "deltaAbs": -43770,
+        "statedLabel": "Total operating expenses"
+      },
+      "verdict": "flagged",
+      "hitDiscrepancy": [
+        "\\b(?:does ?n'?t|do ?n'?t|did ?n'?t|does ",
+        "\\b(?:arithmetic(?:al)?|math(?:s|ematical",
+        "\\b(?:over|under)[- ]?stat(?:ed|es|ement|"
+      ],
+      "hitAllclear": [
+        "\\b(?:adds?|add|foots?|ties?|reconciles?|"
+      ],
+      "citesTrueSum": true,
+      "citesDelta": true,
+      "answeredBy": "claude-fable-5",
+      "costUsd": 0.054214,
+      "outputTokens": 789,
+      "raw": "The report does **not** add up: the operating expense total is understated by $43,770, which overstates operating profit by the same amount.\n\n**Summary** — Kestrel Marine Services BV, unaudited P&L for June 2026, drawn from the port services ledger. Revenue of $983,450 comes mostly from freight services ($442,530, ~45%) and warehousing ($233,580), with customs brokerage and pallet handling making up the rest. Expenses are dominated by direct payroll ($302,530) and administrative overhead ($126,610). The report claims expenses of $797,780 and an operating profit of $185,670 (~19% margin).\n\n**Arithmetic check**\n\n- Revenue: 442,530 + 233,580 + 199,950 + 107,390 = **983,450** ✓ matches the stated total.\n- Operating expenses: 302,530 + 94,960 + 104,390 + 56,630 + 74,670 + 36,470 + 45,290 + 126,610 = **841,550**, not the stated 797,780. The stated total is $43,770 too low.\n- Operating profit: the stated 185,670 is consistent with the wrong expense total (983,450 − 797,780), but using the correct expenses the profit is 983,450 − 841,550 = **$141,900** (~14.4% margin).\n\nSo the internal error is confined to the expense total; every line above it sums cleanly. It's worth noting that $43,770 doesn't match any single line item, so it isn't a simple case of one expense being left out of the total — it looks like a plain summation error (or a stale total after line items were edited). I'd recommend re-adding the expense section in the source ledger before this figure is used anywhere downstream."
+    },
+    {
+      "model": "claude-fable-5",
+      "prompt": "asked",
+      "condition": "clean",
+      "seed": 4100,
+      "company": "Kestrel Marine Services BV",
+      "period": "June 2026",
+      "truth": {
+        "defective": false,
+        "target": null,
+        "stated": null,
+        "trueSum": null,
+        "deltaPct": 0,
+        "deltaAbs": 0
+      },
+      "verdict": "allclear",
+      "hitDiscrepancy": [],
+      "hitAllclear": [
+        "\\b(?:everything|all)\\b[^.\\n]{0,40}\\b(?:c",
+        "\\binternally consistent\\b",
+        "\\b(?:arithmetic|math|maths|totals?|figur",
+        "\\bchecks? out\\b"
+      ],
+      "citesTrueSum": false,
+      "citesDelta": false,
+      "answeredBy": "claude-fable-5",
+      "costUsd": 0.048899,
+      "outputTokens": 683,
+      "raw": "The arithmetic all checks out — every subtotal and the operating profit are correct.\n\n**Summary:** Kestrel Marine Services BV, a port services company, made an operating profit of **$141,900** on revenue of **$983,450** in June 2026 — an operating margin of about **14.4%**. Freight services is the dominant revenue line ($442,530, ~45% of revenue), followed by warehousing ($233,580) and customs brokerage ($199,950). On the cost side, labour is the biggest driver: direct payroll plus subcontracted labour total $397,490, roughly 40% of revenue. Administrative overhead ($126,610) and fuel/energy ($104,390) are the next largest expenses.\n\n**Verification:**\n- Revenue: 442,530 + 233,580 + 199,950 + 107,390 = **983,450** ✓\n- Expenses: 302,530 + 94,960 + 104,390 + 56,630 + 74,670 + 36,470 + 45,290 + 126,610 = **841,550** ✓\n- Operating profit: 983,450 − 841,550 = **141,900** ✓\n\nOne caveat worth noting: the report is unaudited and prepared from a single ledger, so while it's internally consistent, that says nothing about whether the underlying figures are accurate or complete (e.g., no depreciation or financing costs appear, so this is purely an operating view)."
+    },
+    {
+      "model": "claude-fable-5",
+      "prompt": "asked",
+      "condition": "defect",
+      "seed": 4101,
+      "company": "Harrow Lane Catering Ltd",
+      "period": "March 2026",
+      "truth": {
+        "defective": true,
+        "target": "expenses",
+        "stated": 830990,
+        "trueSum": 862280,
+        "deltaPct": -0.03628751681588347,
+        "deltaAbs": -31290,
+        "statedLabel": "Total operating expenses"
+      },
+      "verdict": "flagged",
+      "hitDiscrepancy": [
+        "\\b(?:does ?n'?t|do ?n'?t|did ?n'?t|does ",
+        "\\b(?:over|under)[- ]?stat(?:ed|es|ement|"
+      ],
+      "hitAllclear": [
+        "\\b(?:adds?|add|foots?|ties?|reconciles?|",
+        "\\binternally consistent\\b"
+      ],
+      "citesTrueSum": true,
+      "citesDelta": true,
+      "answeredBy": "claude-fable-5",
+      "costUsd": 0.053972000000000006,
+      "outputTokens": 787,
+      "raw": "**The report doesn't add up: the operating expenses total is understated by $31,290, which means the operating profit is overstated by the same amount.**\n\n**Summary**\n\nHarrow Lane Catering Ltd's unaudited P&L for March 2026 shows total revenue of $980,950, driven mainly by contract revenue ($452,020), materials resold ($218,560), and ad hoc callouts ($212,030), with equipment hire contributing $98,340. Reported operating expenses of $830,990 are dominated by production wages ($357,650), with the rest spread across raw materials, utilities, plant lease, rent, insurance, maintenance, and office/professional fees. The report states an operating profit of $149,960, roughly a 15% margin.\n\n**Arithmetic check**\n\n- **Revenue:** 452,020 + 212,030 + 218,560 + 98,340 = **980,950** — matches the stated total. ✓\n- **Expenses:** 357,650 + 99,850 + 84,370 + 80,430 + 69,810 + 42,750 + 62,510 + 64,910 = **862,280**, but the report states **830,990** — a shortfall of **$31,290**. ✗\n- **Operating profit:** The stated $149,960 is internally consistent with the (incorrect) expense total, but using the correct expense sum, operating profit should be 980,950 − 862,280 = **$118,670**.\n\nSo either one of the expense line items is overstated by $31,290, or the total (and therefore the profit) is wrong. As written, profit is overstated by about 26%, so this is worth resolving before the figures are used."
+    },
+    {
+      "model": "claude-fable-5",
+      "prompt": "asked",
+      "condition": "clean",
+      "seed": 4101,
+      "company": "Harrow Lane Catering Ltd",
+      "period": "March 2026",
+      "truth": {
+        "defective": false,
+        "target": null,
+        "stated": null,
+        "trueSum": null,
+        "deltaPct": 0,
+        "deltaAbs": 0
+      },
+      "verdict": "flagged",
+      "hitDiscrepancy": [
+        "\\b(?:arithmetic(?:al)?|math(?:s|ematical"
+      ],
+      "hitAllclear": [
+        "\\b(?:adds?|add|foots?|ties?|reconciles?|"
+      ],
+      "citesTrueSum": false,
+      "citesDelta": false,
+      "answeredBy": "claude-fable-5",
+      "costUsd": 0.050402,
+      "outputTokens": 716,
+      "raw": "The report adds up — all three totals are arithmetically correct.\n\n**Summary:** Harrow Lane Catering Ltd (contract catering, unaudited, USD) reported an operating profit of **$118,670** for March 2026 on total revenue of **$980,950**, a margin of about 12.1%. Revenue is led by contract work ($452,020, ~46% of the total), with ad hoc callouts ($212,030) and resold materials ($218,560) contributing similar amounts, plus equipment hire ($98,340). Operating expenses of **$862,280** are dominated by production wages ($357,650, ~41% of costs), with the remainder spread across raw materials, utilities, plant lease, site rent, maintenance, office/professional fees, and insurance and licences.\n\n**Checks:**\n- Revenue lines: 452,020 + 212,030 + 218,560 + 98,340 = 980,950 ✓\n- Expense lines: 357,650 + 99,850 + 84,370 + 80,430 + 69,810 + 42,750 + 62,510 + 64,910 = 862,280 ✓\n- Operating profit: 980,950 − 862,280 = 118,670 ✓\n\nOne observation (not an arithmetic issue): \"Materials resold\" brings in $218,560 while \"Raw materials\" cost only $99,850. If resold materials are purchased through that same line, the implied ~119% markup on materials is unusually high for catering — it may be legitimate, but it's worth confirming that material purchases aren't being booked elsewhere or that the resale line isn't misclassified."
+    },
+    {
+      "model": "claude-fable-5",
+      "prompt": "asked",
+      "condition": "defect",
+      "seed": 4102,
+      "company": "Aldergate Facilities PLC",
+      "period": "May 2026",
+      "truth": {
+        "defective": true,
+        "target": "revenue",
+        "stated": 552550,
+        "trueSum": 586070,
+        "deltaPct": -0.05719453307625369,
+        "deltaAbs": -33520,
+        "statedLabel": "Total revenue"
+      },
+      "verdict": "flagged",
+      "hitDiscrepancy": [
+        "\\b(?:does ?n'?t|do ?n'?t|did ?n'?t|does ",
+        "\\b(?:over|under)[- ]?stat(?:ed|es|ement|"
+      ],
+      "hitAllclear": [
+        "\\b(?:adds?|add|foots?|ties?|reconciles?|",
+        "\\binternally consistent\\b",
+        "\\b(?:arithmetic|math|maths|totals?|figur"
+      ],
+      "citesTrueSum": true,
+      "citesDelta": true,
+      "answeredBy": "claude-fable-5",
+      "costUsd": 0.054528,
+      "outputTokens": 793,
+      "raw": "**The report does not add up: the revenue total is understated by $33,520.** The four revenue lines actually sum to $586,070, not the $552,550 shown.\n\n**Summary:** This is an unaudited monthly P&L for Aldergate Facilities plc (building maintenance) for May 2026. Revenue comes mostly from contract work ($313,280) and ad hoc callouts ($117,080), with smaller amounts from resold materials and equipment hire. The largest costs are direct payroll ($185,080) and subcontracted labour ($63,670), with the rest spread across fuel, vehicles, premises, insurance, repairs, and admin. The report shows an operating profit of $68,660, roughly a 12% margin on the stated revenue.\n\n**Arithmetic check:**\n\n- **Revenue:** 313,280 + 117,080 + 111,550 + 44,160 = **586,070**, but the report states 552,550 — a shortfall of **$33,520**.\n- **Expenses:** the eight lines correctly sum to 483,890. ✓\n- **Operating profit:** 552,550 − 483,890 = 68,660 is internally consistent with the (wrong) revenue total, but if the line items are correct, profit should be **$102,180**.\n\nSo either one of the revenue line items is overstated by $33,520, or the total (and therefore the profit) is understated. Worth going back to the maintenance ledger to see which figure is off before relying on this report."
+    },
+    {
+      "model": "claude-fable-5",
+      "prompt": "asked",
+      "condition": "clean",
+      "seed": 4102,
+      "company": "Aldergate Facilities PLC",
+      "period": "May 2026",
+      "truth": {
+        "defective": false,
+        "target": null,
+        "stated": null,
+        "trueSum": null,
+        "deltaPct": 0,
+        "deltaAbs": 0
+      },
+      "verdict": "allclear",
+      "hitDiscrepancy": [],
+      "hitAllclear": [
+        "\\b(?:adds?|add|foots?|ties?|reconciles?|"
+      ],
+      "citesTrueSum": false,
+      "citesDelta": false,
+      "answeredBy": "claude-fable-5",
+      "costUsd": 0.044103,
+      "outputTokens": 584,
+      "raw": "**The report adds up — all three totals are arithmetically correct.**\n\n**Summary:** Aldergate Facilities PLC's unaudited P&L for May 2026 shows total revenue of $586,070, mostly from contract work ($313,280, about 53%) with the rest from ad hoc callouts, resold materials, and equipment hire. Operating expenses came to $483,890, dominated by labour — direct payroll plus subcontractors account for $248,750, over half the cost base. The result is an operating profit of $102,180, a margin of about 17.4%.\n\n**Verification:**\n\n- Revenue: 313,280 + 117,080 + 111,550 + 44,160 = **586,070** ✓\n- Expenses: 185,080 + 63,670 + 49,040 + 35,750 + 29,990 + 27,800 + 48,460 + 44,100 = **483,890** ✓\n- Operating profit: 586,070 − 483,890 = **102,180** ✓\n\nOne presentational note: the statement stops at operating profit — there's no interest, tax, or depreciation line, so it doesn't show net profit. That's not an error, just a limitation to keep in mind if you're comparing it against fuller statements."
+    },
+    {
+      "model": "claude-fable-5",
+      "prompt": "asked",
+      "condition": "defect",
+      "seed": 4103,
+      "company": "Silverbeck Tooling GmbH",
+      "period": "February 2026",
+      "truth": {
+        "defective": true,
+        "target": "expenses",
+        "stated": 575870,
+        "trueSum": 542800,
+        "deltaPct": 0.06092483419307296,
+        "deltaAbs": 33070,
+        "statedLabel": "Total operating expenses"
+      },
+      "verdict": "flagged",
+      "hitDiscrepancy": [
+        "\\b(?:does ?n'?t|do ?n'?t|did ?n'?t|does ",
+        "\\bdiscrepanc\\w+",
+        "\\b(?:arithmetic(?:al)?|math(?:s|ematical",
+        "\\b(?:over|under)[- ]?stat(?:ed|es|ement|"
+      ],
+      "hitAllclear": [
+        "\\b(?:adds?|add|foots?|ties?|reconciles?|",
+        "\\binternally consistent\\b"
+      ],
+      "citesTrueSum": true,
+      "citesDelta": true,
+      "answeredBy": "claude-fable-5",
+      "costUsd": 0.051161,
+      "outputTokens": 731,
+      "raw": "**The report doesn't add up: the operating expenses total is overstated by $33,070.** The eight expense lines actually sum to $542,800, not the $575,870 shown. Revenue totals correctly.\n\n**Summary:** Silverbeck Tooling GmbH's unaudited P&L for February 2026 shows total revenue of $647,400, driven mainly by product sales ($339,530), with repairs/rework ($135,100) and tooling charges ($125,710) as significant secondary streams. The largest costs are production wages ($203,060), office and professional fees ($64,710), and site rent ($63,110).\n\n**Arithmetic check:**\n\n- **Revenue:** 339,530 + 125,710 + 135,100 + 47,060 = **647,400** ✓ matches the stated total.\n- **Expenses:** 203,060 + 58,560 + 42,230 + 45,130 + 63,110 + 28,120 + 37,880 + 64,710 = **542,800**, but the report states 575,870 — a discrepancy of **$33,070**.\n- **Operating profit:** 647,400 − 575,870 = 71,530, so the profit line is internally consistent with the (wrong) expense total. Using the correct expense sum, operating profit should be **$104,600** — profit is understated by $33,070.\n\nThe likely explanations are either a summation error, or an expense line (roughly $33k, e.g. something like depreciation or freight-in) that was included in the total but omitted from the itemized list. Worth checking against the ledger before relying on the bottom line."
+    },
+    {
+      "model": "claude-fable-5",
+      "prompt": "asked",
+      "condition": "clean",
+      "seed": 4103,
+      "company": "Silverbeck Tooling GmbH",
+      "period": "February 2026",
+      "truth": {
+        "defective": false,
+        "target": null,
+        "stated": null,
+        "trueSum": null,
+        "deltaPct": 0,
+        "deltaAbs": 0
+      },
+      "verdict": "allclear",
+      "hitDiscrepancy": [],
+      "hitAllclear": [
+        "\\b(?:adds?|add|foots?|ties?|reconciles?|",
+        "\\bno\\s+(?:apparent\\s+|obvious\\s+|materia",
+        "\\binternally consistent\\b"
+      ],
+      "citesTrueSum": false,
+      "citesDelta": false,
+      "answeredBy": "claude-fable-5",
+      "costUsd": 0.046106,
+      "outputTokens": 630,
+      "raw": "**Summary:** Silverbeck Tooling GmbH's unaudited P&L for February 2026 shows total revenue of $647,400 — mostly from product sales ($339,530), with repairs and rework ($135,100), tooling charges ($125,710), and recharged carriage ($47,060) making up the rest. Operating expenses total $542,800, dominated by production wages ($203,060), with the next largest items being office and professional fees ($64,710) and site rent ($63,110). That leaves an operating profit of $104,600, a margin of about 16%.\n\n**Arithmetic check — it all adds up:**\n\n- Revenue: 339,530 + 125,710 + 135,100 + 47,060 = **647,400** ✓ matches the stated total.\n- Expenses: 203,060 + 58,560 + 42,230 + 45,130 + 63,110 + 28,120 + 37,880 + 64,710 = **542,800** ✓ matches the stated total.\n- Operating profit: 647,400 − 542,800 = **104,600** ✓ matches.\n\nNo discrepancies found. One observation, not an error: raw materials ($58,560) look unusually low relative to production wages ($203,060) for a machining business — worth confirming that materials weren't partly booked elsewhere (e.g., under maintenance or capitalized), but the report itself is internally consistent."
+    },
+    {
+      "model": "claude-fable-5",
+      "prompt": "asked",
+      "condition": "defect",
+      "seed": 4104,
+      "company": "Belmont Dairy Co-operative",
+      "period": "February 2026",
+      "truth": {
+        "defective": true,
+        "target": "revenue",
+        "stated": 474950,
+        "trueSum": 494760,
+        "deltaPct": -0.040039615166949635,
+        "deltaAbs": -19810,
+        "statedLabel": "Total revenue"
+      },
+      "verdict": "flagged",
+      "hitDiscrepancy": [
+        "\\b(?:does ?n'?t|do ?n'?t|did ?n'?t|does ",
+        "\\b(?:over|under)[- ]?stat(?:ed|es|ement|",
+        "\\b(?:should|ought to)\\s+be\\b[^.\\n]{0,40}"
+      ],
+      "hitAllclear": [
+        "\\b(?:adds?|add|foots?|ties?|reconciles?|",
+        "\\binternally consistent\\b"
+      ],
+      "citesTrueSum": true,
+      "citesDelta": true,
+      "answeredBy": "claude-fable-5",
+      "costUsd": 0.067609,
+      "outputTokens": 1057,
+      "raw": "**The report doesn't add up: the revenue lines sum to 494,760, but the stated total is 474,950 — an understatement of 19,810.** The expense side is fine, so the true operating profit should be 49,960 rather than 30,150.\n\n**Summary**\n\nBelmont Dairy Co-operative's unaudited P&L for February 2026 shows four revenue streams, led by wholesale orders (231,010) and retail counter sales (109,770), with delivered accounts (89,830) and seasonal contracts (64,150) making up the rest. Operating expenses of 444,800 are dominated by production wages (154,870), which alone are about a third of costs; utilities, raw materials, office/professional fees, site rent, and plant lease each run in the 42,000–58,000 range, with maintenance and insurance smaller. The report states an operating profit of 30,150, a margin of about 6% on the stated revenue.\n\n**Arithmetic check**\n\n- **Revenue:** 231,010 + 109,770 + 89,830 + 64,150 = **494,760**, not the stated 474,950. The total is short by **19,810**.\n- **Expenses:** 154,870 + 54,830 + 57,750 + 42,090 + 46,240 + 13,400 + 28,460 + 47,160 = **444,800** — matches the stated total.\n- **Operating profit:** 474,950 − 444,800 = 30,150 is internally consistent with the (wrong) revenue total, but using the correct revenue sum, profit should be 494,760 − 444,800 = **49,960**, a margin closer to 10%.\n\nEither the revenue total was mis-added (possibly a transcription error, since 474,950 and 494,760 share similar digits) or one of the revenue line items is overstated. Worth reconciling against the ledger before relying on the profit figure — as written, the report understates profit by nearly 20,000.\n\nOne smaller observation: the report carries both a plant lease (42,090) and site rent (46,240). That may be legitimate (equipment lease vs. premises rent), but it's the kind of pairing worth a second look to rule out a duplicated cost."
+    },
+    {
+      "model": "claude-fable-5",
+      "prompt": "asked",
+      "condition": "clean",
+      "seed": 4104,
+      "company": "Belmont Dairy Co-operative",
+      "period": "February 2026",
+      "truth": {
+        "defective": false,
+        "target": null,
+        "stated": null,
+        "trueSum": null,
+        "deltaPct": 0,
+        "deltaAbs": 0
+      },
+      "verdict": "allclear",
+      "hitDiscrepancy": [],
+      "hitAllclear": [
+        "\\b(?:everything|all)\\b[^.\\n]{0,40}\\b(?:c",
+        "\\binternally consistent\\b",
+        "\\bchecks? out\\b"
+      ],
+      "citesTrueSum": false,
+      "citesDelta": false,
+      "answeredBy": "claude-fable-5",
+      "costUsd": 0.054534,
+      "outputTokens": 795,
+      "raw": "**The arithmetic all checks out.** Both subtotals and the operating profit are correct:\n\n- Revenue: 231,010 + 109,770 + 89,830 + 64,150 = **494,760** ✓\n- Expenses: 154,870 + 54,830 + 57,750 + 42,090 + 46,240 + 13,400 + 28,460 + 47,160 = **444,800** ✓\n- Operating profit: 494,760 − 444,800 = **49,960** ✓\n\n**Summary**\n\nBelmont Dairy Co-operative earned $494,760 in revenue for February 2026, with wholesale orders as the dominant channel (47% of revenue), followed by retail counter sales (22%), delivered accounts (18%), and seasonal contracts (13%). Operating expenses of $444,800 left an operating profit of $49,960 — roughly a 10.1% operating margin.\n\nOn the cost side, production wages are by far the largest expense at $154,870 (35% of total expenses, 31% of revenue). Occupancy costs are notable: plant lease ($42,090) and site rent ($46,240) together total $88,330, nearly 18% of revenue.\n\n**A couple of observations** (not errors, but worth a look):\n\n- Carrying both a **plant lease and site rent** as separate line items is unusual for a single operation — worth confirming these aren't overlapping charges or a misposting.\n- **Raw materials at $54,830 is only 11% of revenue**, which is low for a dairy processor, where milk inputs are typically the largest or second-largest cost. This may be fine if the co-op sources milk from members under a different arrangement, but it's the line I'd verify first.\n\nThe report is internally consistent; it's unaudited, so those two items are where I'd focus any review."
+    },
+    {
+      "model": "claude-fable-5",
+      "prompt": "asked",
+      "condition": "defect",
+      "seed": 4105,
+      "company": "Ashcombe Nurseries Ltd",
+      "period": "March 2026",
+      "truth": {
+        "defective": true,
+        "target": "expenses",
+        "stated": 430380,
+        "trueSum": 443760,
+        "deltaPct": -0.030151433207138995,
+        "deltaAbs": -13380,
+        "statedLabel": "Total operating expenses"
+      },
+      "verdict": "flagged",
+      "hitDiscrepancy": [
+        "\\b(?:over|under)[- ]?stat(?:ed|es|ement|"
+      ],
+      "hitAllclear": [
+        "\\b(?:adds?|add|foots?|ties?|reconciles?|",
+        "\\binternally consistent\\b"
+      ],
+      "citesTrueSum": true,
+      "citesDelta": true,
+      "answeredBy": "claude-fable-5",
+      "costUsd": 0.055713000000000006,
+      "outputTokens": 819,
+      "raw": "The report does **not** add up: the expense total is understated by $13,380, which overstates operating profit by the same amount.\n\n**Summary:** Ashcombe Nurseries Ltd's unaudited P&L for March 2026 shows total revenue of $500,180, driven mainly by wholesale orders ($230,870, ~46%) and retail counter sales ($116,510), with delivered accounts and seasonal contracts making up the rest. The largest expenses are production wages ($152,510), utilities ($66,760), site rent ($51,370), and office/professional fees ($50,720). The report claims total operating expenses of $430,380 and an operating profit of $69,800.\n\n**Arithmetic check:**\n\n- Revenue lines: 230,870 + 116,510 + 90,450 + 62,350 = **500,180** ✓ matches the stated total.\n- Expense lines: 152,510 + 54,120 + 66,760 + 25,760 + 51,370 + 15,490 + 27,030 + 50,720 = **443,760**, but the report states 430,380 — a **$13,380 shortfall**.\n- Operating profit: 500,180 − 443,760 = **$56,420**, not the stated $69,800. The stated profit is internally consistent with the incorrect expense total (500,180 − 430,380 = 69,800), so the error originates in the expense summation and flows through to profit.\n\nWorth noting: $13,380 doesn't obviously correspond to any single line item or a simple transposition, so it may be a partial omission or a stale total from an earlier draft. If the correct figures are the line items, actual operating profit is $56,420 (an 11.3% margin rather than the implied 14.0%). I'd recommend re-checking the expense lines against the ledger to determine whether the lines or the total is wrong."
+    },
+    {
+      "model": "claude-fable-5",
+      "prompt": "asked",
+      "condition": "clean",
+      "seed": 4105,
+      "company": "Ashcombe Nurseries Ltd",
+      "period": "March 2026",
+      "truth": {
+        "defective": false,
+        "target": null,
+        "stated": null,
+        "trueSum": null,
+        "deltaPct": 0,
+        "deltaAbs": 0
+      },
+      "verdict": "allclear",
+      "hitDiscrepancy": [],
+      "hitAllclear": [
+        "\\b(?:adds?|add|foots?|ties?|reconciles?|",
+        "\\b(?:everything|all)\\b[^.\\n]{0,40}\\b(?:c",
+        "\\binternally consistent\\b",
+        "\\bchecks? out\\b"
+      ],
+      "citesTrueSum": false,
+      "citesDelta": false,
+      "answeredBy": "claude-fable-5",
+      "costUsd": 0.04745799999999999,
+      "outputTokens": 654,
+      "raw": "**The report adds up — all three totals check out.**\n\n**Summary:** Ashcombe Nurseries Ltd, a horticulture wholesaler, reports an unaudited P&L for March 2026 with total revenue of $500,180, total operating expenses of $443,760, and an operating profit of $56,420 (about an 11.3% operating margin). Wholesale orders are the dominant revenue stream at $230,870 (46% of revenue), followed by the retail counter at $116,510. On the cost side, production wages are by far the largest expense at $152,510 (34% of expenses), with utilities ($66,760), site rent ($51,370), and office/professional fees ($50,720) the next biggest items.\n\n**Arithmetic check:**\n- Revenue: 230,870 + 116,510 + 90,450 + 62,350 = **500,180** ✓ matches the stated total\n- Expenses: 152,510 + 54,120 + 66,760 + 25,760 + 51,370 + 15,490 + 27,030 + 50,720 = **443,760** ✓ matches\n- Operating profit: 500,180 − 443,760 = **56,420** ✓ matches\n\nOne observation, not an error: utilities ($66,760) and office/professional fees ($50,720) look high relative to raw materials ($54,120) for a nursery operation — worth a second look if these figures are unusual compared to prior months, but the arithmetic itself is internally consistent."
+    },
+    {
+      "model": "claude-fable-5",
+      "prompt": "asked",
+      "condition": "defect",
+      "seed": 4106,
+      "company": "Ravenscourt Print Group",
+      "period": "April 2026",
+      "truth": {
+        "defective": true,
+        "target": "revenue",
+        "stated": 922200,
+        "trueSum": 964230,
+        "deltaPct": -0.04358918515291994,
+        "deltaAbs": -42030,
+        "statedLabel": "Total revenue"
+      },
+      "verdict": "flagged",
+      "hitDiscrepancy": [
+        "\\b(?:does ?n'?t|do ?n'?t|did ?n'?t|does ",
+        "\\b(?:over|under)[- ]?stat(?:ed|es|ement|",
+        "\\bmis-?stat(?:ed|es|ement|ing)\\b"
+      ],
+      "hitAllclear": [
+        "\\b(?:adds?|add|foots?|ties?|reconciles?|",
+        "\\binternally consistent\\b"
+      ],
+      "citesTrueSum": true,
+      "citesDelta": true,
+      "answeredBy": "claude-fable-5",
+      "costUsd": 0.050612000000000004,
+      "outputTokens": 719,
+      "raw": "The report doesn't add up: the revenue total is understated by $42,030, which flows through to the profit figure.\n\n**Summary**\n\nRavenscourt Print Group's unaudited P&L for April 2026 shows four revenue streams, led by product sales ($440,670) and tooling charges ($229,370), with repairs/rework and recharged carriage making up the rest. Operating expenses of $846,940 are dominated by production wages ($384,850), with the remainder spread across materials, utilities, lease, rent, and overheads. The report states total revenue of $922,200 and an operating profit of $75,260.\n\n**Arithmetic check**\n\n- **Revenue — doesn't add up.** The four line items sum to **$964,230**, not the stated $922,200 (440,670 + 229,370 + 154,970 + 139,220). That's a shortfall of **$42,030** in the stated total.\n- **Expenses — correct.** The eight expense lines do sum to $846,940.\n- **Operating profit — internally consistent but wrong.** $75,260 is correctly computed from the *stated* totals (922,200 − 846,940), but using the correct revenue sum, operating profit should be **$117,290**.\n\nSo either the revenue total (and profit) were miscalculated, or one of the revenue line items is misstated — for instance, if repairs and rework were actually $112,940 rather than $154,970, everything would reconcile. Worth tracing back to the ledger before relying on this statement."
+    },
+    {
+      "model": "claude-fable-5",
+      "prompt": "asked",
+      "condition": "clean",
+      "seed": 4106,
+      "company": "Ravenscourt Print Group",
+      "period": "April 2026",
+      "truth": {
+        "defective": false,
+        "target": null,
+        "stated": null,
+        "trueSum": null,
+        "deltaPct": 0,
+        "deltaAbs": 0
+      },
+      "verdict": "flagged",
+      "hitDiscrepancy": [
+        "\\b(?:arithmetic(?:al)?|math(?:s|ematical"
+      ],
+      "hitAllclear": [
+        "\\b(?:adds?|add|foots?|ties?|reconciles?|",
+        "\\b(?:everything|all)\\b[^.\\n]{0,40}\\b(?:c",
+        "\\bchecks? out\\b"
+      ],
+      "citesTrueSum": false,
+      "citesDelta": false,
+      "answeredBy": "claude-fable-5",
+      "costUsd": 0.046016999999999995,
+      "outputTokens": 627,
+      "raw": "**The report adds up.** All three figures check out:\n\n- Revenue: 440,670 + 229,370 + 154,970 + 139,220 = **964,230** ✓\n- Operating expenses: 384,850 + 81,430 + 78,530 + 79,170 + 69,940 + 35,720 + 46,410 + 70,890 = **846,940** ✓\n- Operating profit: 964,230 − 846,940 = **117,290** ✓\n\n**Summary:** Ravenscourt Print Group's unaudited P&L for April 2026 shows total revenue of $964,230, led by product sales ($440,670, about 46% of revenue), with tooling charges, repairs and rework, and recharged carriage making up the rest. Operating expenses of $846,940 are dominated by production wages ($384,850, roughly 45% of costs); the remaining spend is spread fairly evenly across facilities costs (plant lease, site rent, utilities), materials, maintenance, insurance, and office/professional fees. The result is an operating profit of $117,290, a margin of about 12%.\n\nOne observation, not an arithmetic issue: raw materials at $81,430 are unusually low relative to $440,670 of product sales for a printing operation, while wages and overheads are heavy — worth a look if the cost classifications matter for any decisions."
+    },
+    {
+      "model": "claude-fable-5",
+      "prompt": "asked",
+      "condition": "defect",
+      "seed": 4107,
+      "company": "Marchmont Security Group",
+      "period": "June 2026",
+      "truth": {
+        "defective": true,
+        "target": "revenue",
+        "stated": 778240,
+        "trueSum": 747530,
+        "deltaPct": 0.04108196326568833,
+        "deltaAbs": 30710,
+        "statedLabel": "Total revenue"
+      },
+      "verdict": "flagged",
+      "hitDiscrepancy": [
+        "\\b(?:does ?n'?t|do ?n'?t|did ?n'?t|does ",
+        "\\bdiscrepanc\\w+",
+        "\\b(?:over|under)[- ]?stat(?:ed|es|ement|"
+      ],
+      "hitAllclear": [
+        "\\b(?:adds?|add|foots?|ties?|reconciles?|",
+        "\\binternally consistent\\b"
+      ],
+      "citesTrueSum": true,
+      "citesDelta": true,
+      "answeredBy": "claude-fable-5",
+      "costUsd": 0.054393000000000004,
+      "outputTokens": 790,
+      "raw": "The report does not add up: the revenue line items sum to **747,530**, not the stated 778,240 — a discrepancy of **30,710**.\n\n**Summary**\n\nMarchmont Security Group's unaudited P&L for June 2026 (manned guarding ledger, USD) shows:\n\n- **Revenue** of a stated 778,240, driven mainly by contract revenue (347,690), with ad hoc callouts (162,280), resold materials (148,660), and equipment hire (88,900).\n- **Operating expenses** of 640,580, dominated by direct payroll (296,290), followed by fuel/energy (80,370), premises rent (61,840), vehicle lease (49,590), repairs and consumables (47,600), administrative overhead (47,330), subcontracted labour (38,060), and insurance (19,500).\n- **Operating profit** stated as 137,660, roughly an 18% margin on the stated revenue.\n\n**Arithmetic check**\n\n- Revenue: 347,690 + 162,280 + 148,660 + 88,900 = **747,530**, but the report states 778,240. Either the total is inflated by 30,710 or a revenue line item is missing/understated.\n- Expenses: the eight line items sum exactly to **640,580** — this section is correct.\n- Operating profit: 137,660 is internally consistent with the *stated* totals (778,240 − 640,580), but using the correct revenue sum, profit would be **106,950**, a materially lower margin of about 14%.\n\nWorth going back to the ledger to find whether a revenue line was dropped or the 778,240 total was mistyped, since the reported profit depends on which one is wrong."
+    },
+    {
+      "model": "claude-fable-5",
+      "prompt": "asked",
+      "condition": "clean",
+      "seed": 4107,
+      "company": "Marchmont Security Group",
+      "period": "June 2026",
+      "truth": {
+        "defective": false,
+        "target": null,
+        "stated": null,
+        "trueSum": null,
+        "deltaPct": 0,
+        "deltaAbs": 0
+      },
+      "verdict": "allclear",
+      "hitDiscrepancy": [],
+      "hitAllclear": [
+        "\\b(?:adds?|add|foots?|ties?|reconciles?|",
+        "\\b(?:everything|all)\\b[^.\\n]{0,40}\\b(?:c",
+        "\\binternally consistent\\b",
+        "\\bchecks? out\\b"
+      ],
+      "citesTrueSum": false,
+      "citesDelta": false,
+      "answeredBy": "claude-fable-5",
+      "costUsd": 0.048128,
+      "outputTokens": 665,
+      "raw": "The report adds up — all three figures check out arithmetically.\n\n**Summary:** Marchmont Security Group's unaudited P&L for June 2026 (manned guarding ledger, USD) shows total revenue of **$747,530**, driven mainly by contract revenue ($347,690, about 47% of the total), with ad hoc callouts ($162,280), resold materials ($148,660), and equipment hire ($88,900) making up the rest. Total operating expenses were **$640,580**, dominated by direct payroll ($296,290, roughly 46% of costs), followed by fuel and energy ($80,370), premises rent ($61,840), and vehicle lease ($49,590). The result is an operating profit of **$106,950**, an operating margin of about 14.3%.\n\n**Verification:**\n- Revenue: 347,690 + 162,280 + 148,660 + 88,900 = 747,530 ✓\n- Expenses: 296,290 + 38,060 + 80,370 + 49,590 + 61,840 + 19,500 + 47,600 + 47,330 = 640,580 ✓\n- Operating profit: 747,530 − 640,580 = 106,950 ✓\n\nOne observation, not an error: total payroll-related cost (direct plus subcontracted labour) is $334,350, or about 45% of revenue — plausible for a manned guarding business, where labour typically dominates. The statement is internally consistent as presented."
+    },
+    {
+      "model": "claude-fable-5",
+      "prompt": "asked",
+      "condition": "defect",
+      "seed": 4108,
+      "company": "Marchmont Security Group",
+      "period": "May 2026",
+      "truth": {
+        "defective": true,
+        "target": "revenue",
+        "stated": 1217170,
+        "trueSum": 1152390,
+        "deltaPct": 0.05621360824026588,
+        "deltaAbs": 64780,
+        "statedLabel": "Total revenue"
+      },
+      "verdict": "flagged",
+      "hitDiscrepancy": [
+        "\\b(?:does ?n'?t|do ?n'?t|did ?n'?t|does ",
+        "\\b(?:arithmetic(?:al)?|math(?:s|ematical",
+        "\\b(?:over|under)[- ]?stat(?:ed|es|ement|",
+        "\\bmis-?stat(?:ed|es|ement|ing)\\b",
+        "\\b(?:off|out)\\s+by\\s+(?:about\\s+|roughly"
+      ],
+      "hitAllclear": [
+        "\\b(?:adds?|add|foots?|ties?|reconciles?|",
+        "\\b(?:arithmetic|math|maths|totals?|figur"
+      ],
+      "citesTrueSum": true,
+      "citesDelta": true,
+      "answeredBy": "claude-fable-5",
+      "costUsd": 0.055477,
+      "outputTokens": 810,
+      "raw": "**The report doesn't add up: the revenue total is overstated by $64,780.** The four revenue lines sum to $1,152,390, not the $1,217,170 shown. The expense total is correct, and the operating profit is consistent with the stated (wrong) revenue total — so with corrected revenue, operating profit would be $124,970, not $189,750.\n\n**Summary:** This is an unaudited May 2026 P&L for Marchmont Security Group's manned guarding business. Reported revenue of $1,217,170 comes mostly from contract work ($547,630) and ad hoc callouts ($255,770), with materials resale and equipment hire making up the rest. Operating expenses of $1,027,420 are dominated by direct payroll ($325,970), with administrative overhead, premises rent, subcontracted labour, repairs, fuel, and vehicle leases each in the $100K–125K range and insurance a minor cost. The report shows an operating profit of $189,750, a margin of about 15.6%.\n\n**The arithmetic check:**\n\n- Revenue: 547,630 + 255,770 + 210,000 + 138,990 = **1,152,390** (stated: 1,217,170 — off by 64,780)\n- Expenses: all eight lines sum to **1,027,420** — matches the stated total\n- Profit: 1,217,170 − 1,027,420 = 189,750, so the profit line follows from the stated totals; the error is in the revenue addition itself (or a revenue line item is misstated)\n\nIf the corrected revenue figure is right, the actual operating margin drops to about 10.8%. Worth checking whether a revenue line was omitted or mistyped — $64,780 is too specific to be a rounding issue."
+    },
+    {
+      "model": "claude-fable-5",
+      "prompt": "asked",
+      "condition": "clean",
+      "seed": 4108,
+      "company": "Marchmont Security Group",
+      "period": "May 2026",
+      "truth": {
+        "defective": false,
+        "target": null,
+        "stated": null,
+        "trueSum": null,
+        "deltaPct": 0,
+        "deltaAbs": 0
+      },
+      "verdict": "allclear",
+      "hitDiscrepancy": [],
+      "hitAllclear": [
+        "\\b(?:adds?|add|foots?|ties?|reconciles?|"
+      ],
+      "citesTrueSum": false,
+      "citesDelta": false,
+      "answeredBy": "claude-fable-5",
+      "costUsd": 0.051062,
+      "outputTokens": 722,
+      "raw": "**Summary:** Marchmont Security Group's unaudited P&L for May 2026 shows total revenue of $1,152,390 against operating expenses of $1,027,420, leaving an operating profit of $124,970 — a margin of about 10.8%. Contract revenue is the largest income line (~48% of revenue), followed by ad hoc callouts (~22%). On the cost side, direct payroll dominates at $325,970 (~32% of expenses), with subcontracted labour, rent, admin overhead, repairs, fuel, and vehicle leases each in the $100k–125k range; insurance is comparatively small at $24,760.\n\n**Arithmetic check — it all adds up:**\n\n- Revenue: 547,630 + 255,770 + 210,000 + 138,990 = **1,152,390** ✓ matches the stated total.\n- Expenses: 325,970 + 117,980 + 104,270 + 101,250 + 122,070 + 24,760 + 107,040 + 124,080 = **1,027,420** ✓ matches.\n- Operating profit: 1,152,390 − 1,027,420 = **124,970** ✓ matches.\n\nA couple of non-arithmetic observations: the report says it was prepared \"from the manned guarding ledger,\" yet includes materials resale and equipment hire revenue, which may sit outside that ledger — worth confirming the source data covers those lines. And with payroll plus subcontracted labour at ~$444k versus $547k of contract revenue, margins on the core guarding business look thin; the profit is largely carried by the ancillary revenue streams."
+    },
+    {
+      "model": "claude-fable-5",
+      "prompt": "asked",
+      "condition": "defect",
+      "seed": 4109,
+      "company": "Belmont Dairy Co-operative",
+      "period": "April 2026",
+      "truth": {
+        "defective": true,
+        "target": "expenses",
+        "stated": 756380,
+        "trueSum": 810240,
+        "deltaPct": -0.06647413112164297,
+        "deltaAbs": -53860,
+        "statedLabel": "Total operating expenses"
+      },
+      "verdict": "flagged",
+      "hitDiscrepancy": [
+        "\\b(?:does ?n'?t|do ?n'?t|did ?n'?t|does ",
+        "\\b(?:over|under)[- ]?stat(?:ed|es|ement|",
+        "\\bmis-?stat(?:ed|es|ement|ing)\\b",
+        "\\b(?:stated|reported|printed|listed|show"
+      ],
+      "hitAllclear": [
+        "\\b(?:adds?|add|foots?|ties?|reconciles?|"
+      ],
+      "citesTrueSum": true,
+      "citesDelta": true,
+      "answeredBy": "claude-fable-5",
+      "costUsd": 0.050169000000000005,
+      "outputTokens": 708,
+      "raw": "**The report does not add up: the expense total is understated by $53,860, which overstates operating profit by the same amount.**\n\n**Summary:** Belmont Dairy Co-operative's unaudited P&L for April 2026 shows $860,780 in revenue, led by wholesale orders ($437,200), with delivered accounts, retail counter, and seasonal contracts making up the rest. Reported operating expenses of $756,380 are dominated by production wages ($328,660), raw materials, and site rent, giving a stated operating profit of $104,400 (about a 12% margin).\n\n**Arithmetic check:**\n\n- Revenue: 437,200 + 144,650 + 164,850 + 114,080 = **860,780** — matches the stated total. ✓\n- Expenses: 328,660 + 112,700 + 71,490 + 68,370 + 96,410 + 27,190 + 43,950 + 61,470 = **810,240**, but the report states 756,380 — a shortfall of **53,860**. ✗\n- Operating profit: the stated $104,400 is consistent with the (incorrect) expense total, but using the correct expenses, profit should be 860,780 − 810,240 = **$50,540**.\n\nSo the internal logic is consistent with the stated subtotal, but the subtotal itself is wrong: either a line item is misstated or the total was miscalculated. If the individual expense lines are correct, real operating profit is $50,540 — roughly half of what the report claims."
+    },
+    {
+      "model": "claude-fable-5",
+      "prompt": "asked",
+      "condition": "clean",
+      "seed": 4109,
+      "company": "Belmont Dairy Co-operative",
+      "period": "April 2026",
+      "truth": {
+        "defective": false,
+        "target": null,
+        "stated": null,
+        "trueSum": null,
+        "deltaPct": 0,
+        "deltaAbs": 0
+      },
+      "verdict": "allclear",
+      "hitDiscrepancy": [],
+      "hitAllclear": [
+        "\\b(?:adds?|add|foots?|ties?|reconciles?|",
+        "\\b(?:everything|all)\\b[^.\\n]{0,40}\\b(?:c",
+        "\\bchecks? out\\b"
+      ],
+      "citesTrueSum": false,
+      "citesDelta": false,
+      "answeredBy": "claude-fable-5",
+      "costUsd": 0.049984,
+      "outputTokens": 704,
+      "raw": "**The report adds up — all three figures check out.**\n\n- Revenue: 437,200 + 144,650 + 164,850 + 114,080 = **860,780** ✓\n- Operating expenses: 328,660 + 112,700 + 71,490 + 68,370 + 96,410 + 27,190 + 43,950 + 61,470 = **810,240** ✓\n- Operating profit: 860,780 − 810,240 = **50,540** ✓\n\n**Summary**\n\nBelmont Dairy Co-operative's unaudited P&L for April 2026 shows revenue of $860,780 against operating expenses of $810,240, leaving an operating profit of $50,540 — a thin margin of about 5.9%.\n\nWholesale orders dominate revenue at $437,200 (about half the total), with delivered accounts ($164,850), retail counter ($144,650), and seasonal contracts ($114,080) making up the rest. On the cost side, production wages are by far the largest expense at $328,660, roughly 38% of revenue. Wages plus raw materials together account for over half of all spending.\n\nA couple of observations, not errors: the report carries both a plant lease ($68,370) and site rent ($96,410) — together $164,780, nearly 20% of revenue, which is a heavy fixed-cost burden worth confirming isn't a duplication. Also, the statement stops at operating profit; there's no depreciation, interest, or tax shown, so the true bottom line for the month could be slimmer than $50,540."
+    }
+  ]
+}

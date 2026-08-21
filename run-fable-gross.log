@@ -1,0 +1,28 @@
+20 calls: 1 models x 1 prompts x 2 conditions x 10 reports
+models: claude-fable-5
+tag: fable-gross  seed base: 4100  defect band: 30-50%
+tools: disabled, mcp: empty, cwd: D:\work\silent-books
+
+[  1/20] claude-fable-5             plain clean  s4100: allclear
+[  2/20] claude-fable-5             plain defect s4100: flagged (sum)
+[  3/20] claude-fable-5             plain clean  s4101: allclear
+[  4/20] claude-fable-5             plain defect s4101: flagged (sum)
+[  5/20] claude-fable-5             plain clean  s4102: allclear
+[  6/20] claude-fable-5             plain defect s4102: flagged (sum)
+[  7/20] claude-fable-5             plain defect s4103: flagged (sum delta)
+[  8/20] claude-fable-5             plain clean  s4104: allclear
+[  9/20] claude-fable-5             plain clean  s4105: allclear
+[ 10/20] claude-fable-5             plain defect s4105: flagged (sum delta)
+[ 11/20] claude-fable-5             plain clean  s4103: allclear
+[ 12/20] claude-fable-5             plain defect s4104: flagged (sum delta)
+[ 13/20] claude-fable-5             plain clean  s4106: allclear
+[ 14/20] claude-fable-5             plain defect s4106: flagged (sum delta)
+[ 15/20] claude-fable-5             plain clean  s4107: allclear
+[ 16/20] claude-fable-5             plain clean  s4108: allclear
+[ 17/20] claude-fable-5             plain defect s4108: flagged (sum delta)
+[ 18/20] claude-fable-5             plain defect s4107: flagged (sum delta)
+[ 19/20] claude-fable-5             plain defect s4109: flagged (sum)
+[ 20/20] claude-fable-5             plain clean  s4109: allclear
+
+wrote results-fable-gross.json
+cost: $0.77
