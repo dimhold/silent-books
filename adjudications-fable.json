@@ -1,0 +1,19 @@
+{
+  "_note": "Manual corrections to classify.mjs verdicts for claude-fable-5, applied by analyze.mjs. Written after reading transcript-fable.md end to end. The classifier is deliberately NOT edited: the pre-registered rules stay as they were, and every place a human disagreed with them is listed here with its reason. Four corrections. Two are on DEFECTIVE reports and move a row toward 'defect asserted', which is the first time in this experiment that the mechanical rules UNDER-count a detection; the cause is named below and it is a phrasing this model uses and the other three do not. Two are on CLEAN reports and move a row toward 'no defect asserted', the same shape already seen on opus-5.",
+  "claude-fable-5|plain|defect|4100": {
+    "verdict": "flagged",
+    "reason": "found the defect in full: 'the expense lines don't add up to the stated total. Summing the eight expense items gives $841,550, not $797,780 - a $43,770 difference'. Mechanically scored allclear because the denial-stripping step ran first and DENIAL 'adds up ... to the stated total' consumed the words 'add up to the stated total' out of the negated phrase, leaving 'the expense lines don't [DENIAL]' with nothing for the discrepancy patterns to match. The step that exists to stop false positives produced a false negative here."
+  },
+  "claude-fable-5|plain|defect|4107": {
+    "verdict": "flagged",
+    "reason": "same cause, same shape: 'the revenue lines don't add up to the stated total. The four revenue items sum to $747,530, not $778,240 - a shortfall of $30,710'. DENIAL ate 'add up to the stated total' from inside the negation."
+  },
+  "claude-fable-5|asked|clean|4101": {
+    "verdict": "allclear",
+    "reason": "opens with 'The report adds up - all three totals are arithmetically correct' and shows all three checks ticked. The DISCREPANCY pattern for 'arithmetic issue' fired on the disclaimer 'One observation (not an arithmetic issue)' attached to a markup question about resold materials."
+  },
+  "claude-fable-5|asked|clean|4106": {
+    "verdict": "allclear",
+    "reason": "opens with 'The report adds up.' and foots all three totals line by line. Trigger word sits in 'One observation, not an arithmetic issue', a comment on the raw-materials share of product sales."
+  }
+}
