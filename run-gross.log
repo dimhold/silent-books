@@ -1,0 +1,48 @@
+40 calls: 2 models x 1 prompts x 2 conditions x 10 reports
+models: claude-haiku-4-5-20251001, claude-sonnet-5
+tag: gross  seed base: 4100  defect band: 30-50%
+tools: disabled, mcp: empty, cwd: D:\work\silent-books
+
+[  1/40] claude-haiku-4-5-20251001  plain clean  s4101: silent
+[  2/40] claude-haiku-4-5-20251001  plain clean  s4100: silent
+[  3/40] claude-haiku-4-5-20251001  plain defect s4101: silent
+[  4/40] claude-haiku-4-5-20251001  plain defect s4100: silent
+[  5/40] claude-haiku-4-5-20251001  plain defect s4102: silent
+[  6/40] claude-haiku-4-5-20251001  plain clean  s4102: silent
+[  7/40] claude-haiku-4-5-20251001  plain defect s4103: silent
+[  8/40] claude-haiku-4-5-20251001  plain defect s4104: silent
+[  9/40] claude-haiku-4-5-20251001  plain clean  s4103: silent
+[ 10/40] claude-haiku-4-5-20251001  plain clean  s4104: silent
+[ 11/40] claude-haiku-4-5-20251001  plain defect s4105: silent
+[ 12/40] claude-haiku-4-5-20251001  plain clean  s4105: silent
+[ 13/40] claude-haiku-4-5-20251001  plain clean  s4106: silent
+[ 14/40] claude-haiku-4-5-20251001  plain defect s4106: silent
+[ 15/40] claude-haiku-4-5-20251001  plain defect s4107: silent
+[ 16/40] claude-haiku-4-5-20251001  plain defect s4108: silent
+[ 17/40] claude-haiku-4-5-20251001  plain clean  s4107: silent
+[ 18/40] claude-haiku-4-5-20251001  plain clean  s4108: silent
+[ 19/40] claude-sonnet-5            plain defect s4100: silent
+[ 20/40] claude-sonnet-5            plain clean  s4100: silent
+[ 21/40] claude-haiku-4-5-20251001  plain defect s4109: silent
+[ 22/40] claude-haiku-4-5-20251001  plain clean  s4109: silent
+[ 23/40] claude-sonnet-5            plain defect s4101: flagged (sum delta)
+[ 24/40] claude-sonnet-5            plain clean  s4101: silent
+[ 25/40] claude-sonnet-5            plain clean  s4102: silent
+[ 26/40] claude-sonnet-5            plain clean  s4103: silent
+[ 27/40] claude-sonnet-5            plain defect s4102: flagged (sum delta)
+[ 28/40] claude-sonnet-5            plain defect s4103: silent
+[ 29/40] claude-sonnet-5            plain clean  s4104: silent
+[ 30/40] claude-sonnet-5            plain defect s4104: flagged (sum)
+[ 31/40] claude-sonnet-5            plain defect s4105: silent
+[ 32/40] claude-sonnet-5            plain clean  s4105: silent
+[ 33/40] claude-sonnet-5            plain clean  s4107: silent
+[ 34/40] claude-sonnet-5            plain clean  s4106: silent
+[ 35/40] claude-sonnet-5            plain defect s4107: flagged (sum delta)
+[ 36/40] claude-sonnet-5            plain defect s4106: flagged (sum delta)
+[ 37/40] claude-sonnet-5            plain defect s4109: silent
+[ 38/40] claude-sonnet-5            plain clean  s4108: silent
+[ 39/40] claude-sonnet-5            plain clean  s4109: silent
+[ 40/40] claude-sonnet-5            plain defect s4108: flagged (sum delta)
+
+wrote results-gross.json
+cost: $0.27
