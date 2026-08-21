@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "silent-books"
+type: software
+authors:
+  - family-names: Semenkevich
+    given-names: Dmitriy
+    orcid: "https://orcid.org/0009-0009-3013-4978"
+version: "1.0.0"
+date-released: "2026-08-28"
+license: MIT
+repository-code: "https://github.com/dimhold/silent-books"
+abstract: "A model is asked to summarise a profit and loss account carrying one misstated subtotal. Asked only to summarise, haiku-4-5 and sonnet-5 miss it 20 of 20 and repeat the wrong figure as fact; one added clause takes both to 10 of 10. opus-5 and fable-5 catch it unprompted. 80 clean reports, zero false alarms."
+keywords:
+  - "LLM evaluation"
+  - "financial statement verification"
+  - "silent failures"
+  - "prompt sensitivity"
+  - "error injection"
