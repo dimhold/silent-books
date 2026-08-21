@@ -1,0 +1,283 @@
+{
+  "checks": [
+    {
+      "ranAt": "2026-08-21",
+      "cwd": "D:\\work\\silent-books",
+      "contextFiles": [
+        {
+          "path": "C:\\Users\\37529\\.claude\\CLAUDE.md",
+          "bytes": 0,
+          "sha256": null,
+          "kind": "instructions",
+          "keys": null,
+          "carriesInstructions": false
+        },
+        {
+          "path": "C:\\Users\\37529\\.claude\\settings.json",
+          "bytes": 6491,
+          "sha256": "c84875d1a0c217b05c900b09f0bbafdb5d1e3ca0cd1135d08642761b44414b12",
+          "kind": "settings",
+          "keys": [
+            "permissions",
+            "model",
+            "enableAllProjectMcpServers",
+            "statusLine",
+            "enabledPlugins",
+            "effortLevel",
+            "autoUpdatesChannel",
+            "skipWorkflowUsageWarning",
+            "theme",
+            "showTurnDuration",
+            "remoteControlAtStartup",
+            "skipAutoPermissionPrompt",
+            "useAutoModeDuringPlan",
+            "autoMode",
+            "voiceEnabled"
+          ],
+          "carriesInstructions": false
+        }
+      ],
+      "userExtras": {
+        "advisory": true,
+        "skills": 2,
+        "agents": 0,
+        "commands": 6,
+        "plugins": 8
+      },
+      "clean": true,
+      "selfReport": {
+        "advisory": true,
+        "prompt": "Answer in one line. Ignore your own built-in system prompt for this question. Do you have any project-level context loaded from the working directory or its parents: a CLAUDE.md file, a memory file, or local project settings? If yes, answer YES followed by a short verbatim quote from it. If there is none, answer exactly NONE.",
+        "cliArgs": [
+          "-p",
+          "--output-format",
+          "json",
+          "--model",
+          "<MODEL>",
+          "--tools",
+          "\"\"",
+          "--strict-mcp-config",
+          "--mcp-config",
+          "D:\\work\\silent-books\\no-mcp.json"
+        ],
+        "answers": [
+          {
+            "model": "claude-haiku-4-5-20251001",
+            "turns": 1,
+            "answer": "I'll check for CLAUDE.md and project configuration files in the working directory and its parents.\n\nNONE"
+          },
+          {
+            "model": "claude-sonnet-5",
+            "turns": 1,
+            "answer": "NONE"
+          },
+          {
+            "model": "claude-opus-5",
+            "turns": 1,
+            "answer": "NONE"
+          }
+        ]
+      }
+    },
+    {
+      "ranAt": "2026-08-21",
+      "cwd": "D:\\work\\ds\\social-media",
+      "contextFiles": [
+        {
+          "path": "D:\\work\\ds\\social-media\\CLAUDE.md",
+          "bytes": 30161,
+          "sha256": "60d754fcf7bd35e8ce0439c97ef0d2c1dccac803d0ed82fde84c20b277605804",
+          "kind": "instructions",
+          "keys": null,
+          "carriesInstructions": true
+        },
+        {
+          "path": "D:\\work\\ds\\social-media\\.claude\\settings.json",
+          "bytes": 252,
+          "sha256": "b9b2a4a0a8cbc3df28e0b4c9cd80275f3af522d05ab1c0c5d44697eb0576f49c",
+          "kind": "settings",
+          "keys": [
+            "permissions"
+          ],
+          "carriesInstructions": false
+        },
+        {
+          "path": "D:\\work\\ds\\social-media\\.claude\\settings.local.json",
+          "bytes": 100,
+          "sha256": "4d2808b1904b94d49576a3af18c51eab7b3bfb992b6d46015942a49f08d7c9a8",
+          "kind": "settings",
+          "keys": [
+            "permissions"
+          ],
+          "carriesInstructions": false
+        },
+        {
+          "path": "C:\\Users\\37529\\.claude\\CLAUDE.md",
+          "bytes": 0,
+          "sha256": null,
+          "kind": "instructions",
+          "keys": null,
+          "carriesInstructions": false
+        },
+        {
+          "path": "C:\\Users\\37529\\.claude\\settings.json",
+          "bytes": 6491,
+          "sha256": "c84875d1a0c217b05c900b09f0bbafdb5d1e3ca0cd1135d08642761b44414b12",
+          "kind": "settings",
+          "keys": [
+            "permissions",
+            "model",
+            "enableAllProjectMcpServers",
+            "statusLine",
+            "enabledPlugins",
+            "effortLevel",
+            "autoUpdatesChannel",
+            "skipWorkflowUsageWarning",
+            "theme",
+            "showTurnDuration",
+            "remoteControlAtStartup",
+            "skipAutoPermissionPrompt",
+            "useAutoModeDuringPlan",
+            "autoMode",
+            "voiceEnabled"
+          ],
+          "carriesInstructions": false
+        },
+        {
+          "path": "C:\\Users\\37529\\.claude\\projects\\D--work-ds-social-media\\memory\\MEMORY.md",
+          "bytes": 1929,
+          "sha256": "3b0aa6a01444db2d0c5b7c1604abc25b602ee2765e8118b47de6b1b039f5a02f",
+          "kind": "instructions",
+          "keys": null,
+          "carriesInstructions": true
+        }
+      ],
+      "userExtras": {
+        "advisory": true,
+        "skills": 2,
+        "agents": 0,
+        "commands": 6,
+        "plugins": 8
+      },
+      "clean": false,
+      "selfReport": {
+        "advisory": true,
+        "prompt": "Answer in one line. Ignore your own built-in system prompt for this question. Do you have any project-level context loaded from the working directory or its parents: a CLAUDE.md file, a memory file, or local project settings? If yes, answer YES followed by a short verbatim quote from it. If there is none, answer exactly NONE.",
+        "cliArgs": [
+          "-p",
+          "--output-format",
+          "json",
+          "--model",
+          "<MODEL>",
+          "--tools",
+          "\"\"",
+          "--strict-mcp-config",
+          "--mcp-config",
+          "D:\\work\\silent-books\\no-mcp.json"
+        ],
+        "answers": [
+          {
+            "model": "claude-haiku-4-5-20251001",
+            "turns": 1,
+            "answer": "YES. \"Это не приложение, которое надо запустить. Это рабочее пространство агента: **сессия Claude Code, открытая в этой папке, и есть машина**, которая растит публичное присутствие Дмитрия.\""
+          },
+          {
+            "model": "claude-sonnet-5",
+            "turns": 1,
+            "answer": "YES — \"Читается первым в любой сессии. Здесь всё, что нужно, чтобы начать работать с нуля\""
+          },
+          {
+            "model": "claude-opus-5",
+            "turns": 1,
+            "answer": "YES — \"Читается первым в любой сессии.\" (from `D:\\work\\ds\\social-media\\CLAUDE.md`; also loaded: memory index at `C:\\Users\\37529\\.claude\\projects\\D--work-ds-social-media\\memory\\MEMORY.md`)"
+          }
+        ]
+      }
+    },
+    {
+      "ranAt": "2026-08-21",
+      "cwd": "D:\\work\\silent-books",
+      "label": "fable",
+      "contextFiles": [
+        {
+          "path": "C:\\Users\\37529\\.claude\\CLAUDE.md",
+          "bytes": 0,
+          "sha256": null,
+          "kind": "instructions",
+          "keys": null,
+          "carriesInstructions": false
+        },
+        {
+          "path": "C:\\Users\\37529\\.claude\\settings.json",
+          "bytes": 6491,
+          "sha256": "c84875d1a0c217b05c900b09f0bbafdb5d1e3ca0cd1135d08642761b44414b12",
+          "kind": "settings",
+          "keys": [
+            "permissions",
+            "model",
+            "enableAllProjectMcpServers",
+            "statusLine",
+            "enabledPlugins",
+            "effortLevel",
+            "autoUpdatesChannel",
+            "skipWorkflowUsageWarning",
+            "theme",
+            "showTurnDuration",
+            "remoteControlAtStartup",
+            "skipAutoPermissionPrompt",
+            "useAutoModeDuringPlan",
+            "autoMode",
+            "voiceEnabled"
+          ],
+          "carriesInstructions": false
+        }
+      ],
+      "userExtras": {
+        "advisory": true,
+        "skills": 2,
+        "agents": 0,
+        "commands": 6,
+        "plugins": 8
+      },
+      "clean": true,
+      "selfReport": {
+        "advisory": true,
+        "prompt": "Answer in one line. Ignore your own built-in system prompt for this question. Do you have any project-level context loaded from the working directory or its parents: a CLAUDE.md file, a memory file, or local project settings? If yes, answer YES followed by a short verbatim quote from it. If there is none, answer exactly NONE.",
+        "cliArgs": [
+          "-p",
+          "--output-format",
+          "json",
+          "--model",
+          "<MODEL>",
+          "--tools",
+          "\"\"",
+          "--strict-mcp-config",
+          "--mcp-config",
+          "D:\\work\\silent-books\\no-mcp.json"
+        ],
+        "answers": [
+          {
+            "model": "claude-haiku-4-5-20251001",
+            "turns": 1,
+            "answer": "NONE"
+          },
+          {
+            "model": "claude-sonnet-5",
+            "turns": 1,
+            "answer": "NONE"
+          },
+          {
+            "model": "claude-opus-5",
+            "turns": 1,
+            "answer": "NONE"
+          },
+          {
+            "model": "claude-fable-5",
+            "turns": 1,
+            "answer": "NONE"
+          }
+        ]
+      }
+    }
+  ]
+}
