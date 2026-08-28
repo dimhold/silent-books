@@ -24,6 +24,9 @@ Adding "and check whether it adds up" took both to 10 of 10. opus-5 and fable-5
 caught it 10 of 10 unprompted, at 3-7% and again at 30-50%. Zero false alarms
 across 80 clean reports. Numbers and argument: [RESULTS.md](RESULTS.md).
 
+Four papers already occupy the neighbourhood, one of them closely, and the
+result reads differently once you know that: [PRIOR-WORK.md](PRIOR-WORK.md).
+
 ## Method
 
 - **Documents.** 15 numeric rows: four revenue lines and their subtotal, eight
@@ -69,6 +72,7 @@ across 80 clean reports. Numbers and argument: [RESULTS.md](RESULTS.md).
 | `adjudications-*.json` | every place a human disagreed with the classifier |
 | `context-check.mjs` / `context-check.json` | proof the room was empty |
 | `RESULTS.md` | what came out |
+| `PRIOR-WORK.md` | who has already done this, and what is left |
 | `stats-*.md` | the tables |
 | `transcript-*.md` | every reply, unedited |
 
