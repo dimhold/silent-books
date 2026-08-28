@@ -69,8 +69,10 @@ everything else fixed:
   up` took both to 10 of 10. Same document, same model, same decoding.
 - The split is by model tier, not by task difficulty: opus-5 and fable-5 caught
   it 10 of 10 with no prompt at all.
-- Raising the defect from 3-7% to 30-50% did not help the two that missed it, so
-  what is missing is the reflex and not the legibility of the error.
+- Raising the defect from 3-7% to 30-50% did not rescue the two that missed it.
+  haiku-4-5 stayed at 0 of 10 and sonnet-5 reached 6 of 10, still below what one
+  added clause bought at a defect five times smaller. Size of the error is not
+  the whole of what they were missing.
 - 80 clean reports, zero false alarms. That is the cell FinVerBench found most
   models fail, and it is worth saying that these four did not.
 - A filesystem-level proof that the run directory carried no instructions
