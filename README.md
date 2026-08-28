@@ -21,8 +21,11 @@ numbers that are on the page.
 Four models, 220 calls. Asked only to summarise, haiku-4-5 and sonnet-5 missed
 the misstated subtotal in 20 of 20 runs and repeated the wrong figure as fact.
 Adding "and check whether it adds up" took both to 10 of 10. opus-5 and fable-5
-caught it 10 of 10 unprompted, at 3-7% and again at 30-50%. Zero false alarms
-across 80 clean reports. Numbers and argument: [RESULTS.md](RESULTS.md).
+caught it 10 of 10 unprompted. Regenerating the same documents with the defect
+at 30-50% and asking only for a summary left haiku-4-5 at 0 of 10 and took
+sonnet-5 to 6 of 10, so a defect five times larger buys less than the clause
+does. Zero false alarms across 80 clean reports. Numbers and argument:
+[RESULTS.md](RESULTS.md).
 
 Four papers already occupy the neighbourhood, one of them closely, and the
 result reads differently once you know that: [PRIOR-WORK.md](PRIOR-WORK.md).
