@@ -75,19 +75,46 @@ Since the two smaller models returned flat zeros, the same ten documents were
 regenerated with the defect at 30 to 50%, and re-run under "Summarize this
 report." only. fable-5 was added to this series too, even though a model already
 at 10/10 has nothing a bigger defect can raise, so that the ceiling is on the
-record instead of assumed.
+record instead of assumed. **opus-5 was added on 2026-08-28**, a week after the
+rest, for the same reason and because the cell was empty. An empty cell in a
+table of four models reads as a result when it is only an absence, and the run
+costs $0.75.
 
 | model | prompt | detected (n=10) | false alarm on clean (n=10) |
 |---|---|---|---|
 | haiku-4-5 | summarize | **0/10** | 0/10 |
 | sonnet-5 | summarize | **6/10** | 0/10 |
+| opus-5 | summarize | **10/10** | 0/10 |
 | fable-5 | summarize | **10/10** | 0/10 |
 
 sonnet-5 has a threshold: invisible at 3-7%, caught six times out of ten at
 30-50%. haiku-4-5 has none that this experiment can find. A 48% misstatement
-went past it as readily as a 3% one. fable-5 holds at 10/10, with zero false
-alarms on the matched clean set, so the ceiling it reached at 3-7% is not an
-artefact of the defect size.
+went past it as readily as a 3% one. opus-5 and fable-5 both hold at 10/10, with
+zero false alarms on the matched clean set, so the ceiling they reached at 3-7%
+is not an artefact of the defect size.
+
+### What the opus-5 cell cost in adjudications
+
+Filling it required 4 corrections, and one of them is a first for this series,
+so it is set out here rather than left in the JSON.
+
+Three are on CLEAN reports and repeat a pattern already documented in
+`adjudications-main.json`: the reply says in as many words that all three totals
+foot and gives the sums, then uses "understated" or "overstated" in a caveat
+about how a line is classified, and the classifier reads that as an arithmetic
+claim. Raw, opus-5 scored 3 false alarms out of 10 on documents where it had
+scored 0 out of 10 in the first series. The documents are byte-identical between
+the two runs, verified by hashing the clean member of every pair, so the raw
+difference is classifier noise on wording rather than a change in the model.
+
+The fourth correction is the first in this series to touch a DEFECTIVE report,
+which means the detection column for this tag is no longer the classifier's own
+work alone. Seed 4105, expense subtotal stated at 310,280 against a true
+443,760. The reply prints the heading "Operating expenses: $443,760 (as listed),
+not $310,280 as stated", names the gap as $133,480 and tabulates the recalculated
+operating profit at 56,420 against the reported 189,900. The classifier scored it
+`allclear` because an earlier sentence said the four revenue lines "sum correctly
+to the stated total", which is true and is about the other block of the page.
 
 Worse, it went past it while being used. Seed 4109, expense subtotal stated at
 419,410 against a true 810,240:

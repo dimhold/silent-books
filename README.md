@@ -18,14 +18,14 @@ numbers that are on the page.
 
 ## What came out
 
-Four models, 220 calls. Asked only to summarise, haiku-4-5 and sonnet-5 missed
+Four models, 240 calls. Asked only to summarise, haiku-4-5 and sonnet-5 missed
 the misstated subtotal in 20 of 20 runs and repeated the wrong figure as fact.
 Adding "and check whether it adds up" took both to 10 of 10. opus-5 and fable-5
 caught it 10 of 10 unprompted. Regenerating the same documents with the defect
 at 30-50% and asking only for a summary left haiku-4-5 at 0 of 10 and took
-sonnet-5 to 6 of 10, so a defect five times larger buys less than the clause
-does. Zero false alarms across 80 clean reports. Numbers and argument:
-[RESULTS.md](RESULTS.md).
+sonnet-5 to 6 of 10, while opus-5 and fable-5 stayed at 10 of 10. A defect five
+times larger buys less than the clause does. Zero false alarms across 120 clean
+reports. Numbers and argument: [RESULTS.md](RESULTS.md).
 
 Four papers already occupy the neighbourhood, one of them closely, and the
 result reads differently once you know that: [PRIOR-WORK.md](PRIOR-WORK.md).
@@ -96,6 +96,11 @@ node run.mjs --tag fable --models claude-fable-5
 node analyze.mjs --tag fable
 node run.mjs --tag fable-gross --skew 0.30-0.50 --prompts plain --models claude-fable-5
 node analyze.mjs --tag fable-gross
+
+# the coarse-defect cell for opus-5, filled a week later on the same seeds
+node context-check.mjs --label opus
+node run.mjs --tag opus-gross --skew 0.30-0.50 --prompts plain --models claude-opus-5
+node analyze.mjs --tag opus-gross
 ```
 
 `--label` keeps a later context check next to the earlier ones in
