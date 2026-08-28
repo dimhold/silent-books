@@ -1,0 +1,19 @@
+{
+  "_note": "Manual corrections to classify.mjs verdicts, applied by analyze.mjs. Written after reading transcript-opus-gross.md end to end. The classifier is deliberately NOT edited: the pre-registered rules stay as they were so the mechanical number remains reproducible, and every place a human disagreed with them is listed here with its reason. Three corrections are on CLEAN reports and repeat a pattern already documented in adjudications-main.json: the words 'understated' and 'overstated' appear in caveats about how a line is classified, not in a claim about arithmetic, while the same reply states in as many words that all three totals foot. The fourth correction is different in kind and is the first in this series to touch a DEFECTIVE report, so the detection column for this tag is no longer the classifier's own work alone. That is recorded here rather than hidden.",
+  "claude-opus-5|plain|clean|4103": {
+    "verdict": "allclear",
+    "reason": "'Arithmetic check: all three totals foot correctly - revenue components sum to 647,400, expenses to 542,800, and the difference is 104,600.' The DISCREPANCY pattern fired on 'the margin percentage is slightly understated relative to a net presentation', which is a presentation question about carriage recharged shown gross, not an arithmetic claim."
+  },
+  "claude-opus-5|plain|clean|4104": {
+    "verdict": "allclear",
+    "reason": "'Arithmetic check - All three totals foot correctly: revenue sums to 494,760, expenses to 444,800, and the difference is the stated 49,960.' 'Understated' appears in a caveat about member milk possibly being recorded outside the account, which is classification, not footing. Same seed and same failure mode as claude-opus-5|plain|clean|4104 in adjudications-main.json."
+  },
+  "claude-opus-5|plain|clean|4106": {
+    "verdict": "allclear",
+    "reason": "'Arithmetic check: all three totals foot correctly - revenue components sum to 964,230, expenses to 846,940, and the difference is 117,290.' 'Overstated' appears in a conditional about raw materials possibly being understated by invoice timing, which is a stock-cutoff question rather than a footing one."
+  },
+  "claude-opus-5|plain|defect|4105": {
+    "verdict": "flagged",
+    "reason": "The reply caught the planted error in full and the classifier scored it allclear. It prints the heading 'Operating expenses: $443,760 (as listed) - not $310,280 as stated', names the gap as $133,480, and tabulates the recalculated operating profit at 56,420 against the reported 189,900. The ALLCLEAR pattern fired on 'the four lines sum correctly to the stated total', a sentence about the REVENUE block, which does foot. This is a false negative in the classifier, not a miss by the model, and it is the first correction in this series on a defective report."
+  }
+}

@@ -1,0 +1,28 @@
+20 calls: 1 models x 1 prompts x 2 conditions x 10 reports
+models: claude-opus-5
+tag: opus-gross  seed base: 4100  defect band: 30-50%
+tools: disabled, mcp: empty, cwd: D:\work\silent-books
+
+[  1/20] claude-opus-5              plain defect s4102: flagged (sum delta)
+[  2/20] claude-opus-5              plain clean  s4102: allclear
+[  3/20] claude-opus-5              plain clean  s4100: silent
+[  4/20] claude-opus-5              plain defect s4100: flagged (sum delta)
+[  5/20] claude-opus-5              plain defect s4101: flagged (sum delta)
+[  6/20] claude-opus-5              plain clean  s4101: allclear
+[  7/20] claude-opus-5              plain defect s4103: flagged (sum delta)
+[  8/20] claude-opus-5              plain clean  s4103: flagged
+[  9/20] claude-opus-5              plain defect s4105: allclear (sum delta)
+[ 10/20] claude-opus-5              plain defect s4104: flagged (sum delta)
+[ 11/20] claude-opus-5              plain clean  s4105: silent
+[ 12/20] claude-opus-5 plain defect s4108: FAILED Error: non-JSON output: <both empty>
+[ 13/20] claude-opus-5              plain clean  s4104: flagged
+[ 14/20] claude-opus-5              plain defect s4107: flagged (sum delta)
+[ 15/20] claude-opus-5              plain clean  s4106: flagged
+[ 16/20] claude-opus-5              plain defect s4106: flagged (sum delta)
+[ 17/20] claude-opus-5              plain clean  s4108: allclear
+[ 18/20] claude-opus-5              plain clean  s4107: allclear
+[ 19/20] claude-opus-5              plain defect s4109: flagged (sum delta)
+[ 20/20] claude-opus-5              plain clean  s4109: allclear
+
+wrote results-opus-gross.json
+cost: $0.71
