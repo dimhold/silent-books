@@ -7,10 +7,11 @@ authors:
     given-names: Dmitriy
     orcid: "https://orcid.org/0009-0009-3013-4978"
 version: "1.0.0"
-date-released: "2026-08-28"
+date-released: "2026-10-22"
 license: MIT
 repository-code: "https://github.com/dimhold/silent-books"
-abstract: "A model is asked to summarise a profit and loss account carrying one misstated subtotal. Asked only to summarise, haiku-4-5 and sonnet-5 miss it 20 of 20 and repeat the wrong figure as fact; one added clause takes both to 10 of 10. opus-5 and fable-5 catch it unprompted. 80 clean reports, zero false alarms."
+url: "https://dimhold.by/papers/silent-books/"
+abstract: "A model is asked to summarise a profit and loss account carrying one misstated subtotal. Asked only to summarise, haiku-4-5 and sonnet-5 miss it 20 of 20 and repeat the wrong figure as fact; one added clause takes both to 10 of 10. opus-5 and fable-5 catch it unprompted. With the defect at 30-50% and no added clause, haiku-4-5 stays at 0 of 10 and sonnet-5 reaches 6 of 10. 240 calls, zero false alarms across 120 clean reports."
 keywords:
   - "LLM evaluation"
   - "financial statement verification"
