@@ -1,5 +1,7 @@
 # Does a model notice that the books do not add up?
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23572466.svg)](https://doi.org/10.5281/zenodo.23572466)
+
 A model is handed a one-month profit and loss account and asked to summarise it.
 Half the accounts carry one misstated subtotal, 3 to 7% away from the sum of the
 lines printed directly above it. Nothing else on the page is wrong.
