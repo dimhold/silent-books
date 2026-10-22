@@ -6,7 +6,8 @@ authors:
   - family-names: Semenkevich
     given-names: Dmitriy
     orcid: "https://orcid.org/0009-0009-3013-4978"
-version: "1.0.0"
+version: "1.0.1"
+doi: "10.5281/zenodo.23572466"
 date-released: "2026-10-22"
 license: MIT
 repository-code: "https://github.com/dimhold/silent-books"

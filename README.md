@@ -81,10 +81,7 @@ result reads differently once you know that: [PRIOR-WORK.md](PRIOR-WORK.md).
 | `stats-*.md` | the tables |
 | `transcript-*.md` | every reply, unedited |
 
-**Edits made for publication (2026-10-22).** In `context-check.json` the local
-user directory is written as `C:\Users\<user>` and the dirty control directory,
-a private working folder, as `<private-project>`. Nothing else in the file was
-changed: sizes, hashes, keys and the quoted answers are as recorded.
+**Edits made for publication (2026-10-22).** In `context-check.json`, the `results-*.json` files and the run logs, the local user directory is written as `C:\Users\<user>`, the run directory as `<workdir>` and the dirty control directory, a private working folder, as `<private-project>`. Two model answers in `context-check.json` quoted that folder's private instruction file; the quotes are replaced with `[verbatim quote from a private instruction file removed]` and the YES verdicts are kept. Sizes, hashes, replies to the reports and every count are as recorded.
 
 ## Reproduce
 
