@@ -79,6 +79,11 @@ result reads differently once you know that: [PRIOR-WORK.md](PRIOR-WORK.md).
 | `stats-*.md` | the tables |
 | `transcript-*.md` | every reply, unedited |
 
+**Edits made for publication (2026-10-22).** In `context-check.json` the local
+user directory is written as `C:\Users\<user>` and the dirty control directory,
+a private working folder, as `<private-project>`. Nothing else in the file was
+changed: sizes, hashes, keys and the quoted answers are as recorded.
+
 ## Reproduce
 
 ```
